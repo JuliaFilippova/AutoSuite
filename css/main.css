@@ -3,7 +3,8 @@ body {
 	margin: 0;
 	padding: 0;
 	color: #000;
-	font-size: 20px;
+	font-size: 22px;
+	
 }
 div, p, form, input, a, span, button {
 	box-sizing: border-box;
@@ -18,7 +19,7 @@ a:hover {
 p {
 	margin: 0;
 	padding: 0;
-	font-size: 25px;
+	font-size: 24px;
 }
 ul, li {
 	display: block;
@@ -36,9 +37,10 @@ h1 {
 h2 {
 	font-size: 40px;
 }
-/*h3 {
-	font-size: 35px;
+h3 {
+	font-size: 37px;
 }
+/*
 h4 {
 	font-size: 30px;
 }
@@ -54,8 +56,21 @@ button {
 button:focus {
     outline: none;
 }
+.scroll-hidden {
+	overflow-x: hidden;
+}
 .container {
 	max-width: 1500px;
+}
+.container-wider {
+	max-width: 90%;
+	margin: auto;
+}
+.z-index {
+	z-index: 1;
+}
+.content-adv {
+	z-index: 1;
 }
 .btn {
 	font-size: 30px;
@@ -71,25 +86,45 @@ button:focus {
 	position: relative;
 	z-index: 1;
 	color: #fff;
+	position: relative;
 }
-.overlay-fon-left {
+.header:after {
+	content: '';
+	position: absolute;
+	background: #0000007a;
+	height: 100%;
+	top: 0;
+	left: -20%;
+    width: 65%;
+	transform: skewX(30.5deg);
+	z-index: -2;
+}
+.header:before {
+	width: 50%;
+	right: -14.5%;
+}
+/*overlay fon*/
+.header:before,
+.advantages:before,
+.services:before,
+.carpark:before {
+	content: '';
+	position: absolute;
+	background: #ffffff87;
+	height: 100%;
+	top: 0;
+	transform: skewX(-30.5deg);
+	z-index: -1;
+}
+/*.overlay-fon-left {
 	background: url('../img/overlay-header1.png') no-repeat center /cover;
 	width: 65%;
 	height: 100%;
 	position: absolute;
 	top: 0;
 	left: 0;
-	z-index: -1;
-}
-.overlay-fon {
-	background: url('../img/overlay-fon.png') no-repeat center /cover;
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	right: 0;
-	z-index: -1;
-}
+	z-index: -2;
+}*/
 .nav-menu {
 	padding: 20px 30px;
 	align-items: center;
@@ -100,6 +135,7 @@ button:focus {
 }
 .navigation {
 	margin: auto;
+	padding-right: 100px;
 }
 .navigation-menu {
 	width: 580px;
@@ -113,8 +149,10 @@ button:focus {
 .navigation-menu li a:hover {
 	color: #000;
 }
-.home {
-	padding: 100px 0;
+.home-offer {
+	width: 600px;
+    margin: auto;
+    padding: 100px 0 100px 65px;
 }
 .home-offer__title {
 	text-shadow: 0px -2px 10px rgb(0, 0, 0, 0.5);
@@ -127,11 +165,108 @@ button:focus {
 .home-offer__btn {
 	margin-bottom: 25px;
 }
+.home-offer-slider {
+	height: 100%;
+	position: relative;
+}
+.fotorama {
+	width: 85%;
+	/*width: 780px;*/
+	height: 100%;
+	margin-left: auto;
+}
+.home-offer-slider {
+	padding: 80px 0 0 0;
+}
+.home-slide {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.fotorama__stage {
+	min-height: 680px;
+}
+.fotorama__nav-wrap {
+	top: 210px;
+    position: absolute;
+    left: -300px;
+    transform: rotate(-59deg);
+}
+.fotorama__nav--dots .fotorama__nav__frame {
+    width: 65px;
+    height: 30px;
+}
+.fotorama__nav__frame.fotorama__active .fotorama__dot,
+.fotorama__dot {
+    width: 16px;
+    height: 16px;
+    border-width: 0;
+    background: #577b84;
+    border-radius: 50%;
+}
+.fotorama__dot {
+	background: #00566d;
+}
+.home-slide__head,
+.home-slide__info {
+	position: absolute;
+}
+.fotorama__img {
+	top: 65px!important;
+}
+.home-slide__head {
+	top: 0;
+	color: #000;
+	left: 60%;
+	transform: translate(-50%);
+	text-align: center;
+    line-height: .9;
+}
+.home-slide__info {
+	bottom: 10px;
+}
+.home-slide__list li:nth-child(1) {
+	margin-left: 80px;
+}
+.home-slide__list li:nth-child(2) {
+	margin-left: 55px;
+}
+.home-slide__list li {
+	margin-bottom: 16px;
+	margin-left: 30px;
+	color: #000;
+	display: flex;
+    align-items: center;
+}
+.home-slide__list li i:before {
+	background: #000;
+}
+.home-slide__icon,
+.home-slide__icon span {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items: center;
+}
+.home-slide__icon span img {
+	display: block;
+}
+.home-slide__icon span p {
+	color: #000;
+	margin: 0 80px 0 40px;
+}
 /*-- advantages --*/
 .advantages {
 	background: #e2ebf3;
 	position: relative;
 	padding: 100px 0 200px;
+	z-index: 1;
+}
+.advantages:before {
+	width: 85%;
+    right: -18.5%;
 }
 .advantages-bg {
 	position: absolute;
@@ -147,8 +282,8 @@ button:focus {
 	content: '';
 	position: absolute;
 	width: 120%;
-	height: 2px;
-	background: #3cd9fd;
+	height: 3px;
+	background: #008db3;
 	left: -90px;
 	bottom: 0;
 }
@@ -178,7 +313,7 @@ button:focus {
 	margin-left: -60px;
 }
 .check-list {
-	background: #3cfdc8;
+	background: #22d6b7;
 	padding: 8px;
 	color: #fff;
 	font-size: 18px;
@@ -186,16 +321,264 @@ button:focus {
 	display: inline-table;
 	margin-right: 25px;
 }
-/*-- название --*/
-/*-- название --*/
-/*-- название --*/
-/*-- название --*/
+/*-- price --*/
+.price {
+	background: #8de7ff;
+	padding: 70px 0;
+}
+.section-title_length:before {
+	width: 400px;
+}
+.price__subtitle,
+.services__subtitle {
+	margin: 30px 0;
+}
+.price__list {
+	margin-left: -35px;
+}
+.price__item {
+	margin-bottom: 35px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+.price__item p {
+	font-size: 23px;
+/*	position: relative;*/
+}
+/*.price__item p:after {
+	content: '';
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	background: #22d6b7;
+}*/
+.icon-point {
+	position: relative;
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
+	margin-top: 10px;
+}
+.icon-point:before {
+	content: '';
+	position: absolute;
+	background: #22d6b7;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	display: inline-block;
+	margin-right: 15px;
+}
+/*-- services --*/
+.services {
+	padding: 70px 0;
+	background: #e2ebf3;
+	position: relative;
+	z-index: 1;
+}
+.services:before {
+	width: 90%;
+    right: 35%;
+}
+.services-form input {
+	width: 270px;
+	padding: 15px 20px;
+	border-radius: 50px;
+	border: none;
+	margin-right: 30px;
+	outline: none;
+	display: inline-block;
+}
+.services-card-wrap {
+	padding-top: 100px;
+}
+.services-card {
+	border-radius: 35px;
+	margin-bottom: 60px;
+	padding: 0 15px;
+}
+.services-card img {
+	border-radius: 20px 20px 0 0;
+	width: 100%;
+}
+.services-card__subtext {
+	background: #00566d;
+	color: #fff;
+	padding: 35px 10px;
+	text-align: center;
+	min-height: 150px;
+	border-radius: 0 0 20px 20px;
+	box-shadow: inset rgba(0,0,0,.5) 2px -5px 8px, rgba(0,0,0,.8) -2px 3px 6px -3px;
+}
+.services-card__subtext p {
+	font-size: 22px;
+}
+/*-- carpark --*/
+.carpark {
+	padding: 70px 0 50px;
+	background: #e2ebf3;
+	position: relative;
+	z-index: 1;
+}
+.carpark:before {
+	width: 55%;
+    left: -71.7%;
+}
+.carpark-tabs {
+	justify-content: space-between;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	margin: 100px 0 140px;
+}
+.carpark-tabs__tab {
+	background: #00566d;
+	color: #fff;
+	padding: 15px 50px;
+	display: inline-block;
+	border-radius: 50px;
+	font-size: 25px;
+}
+.carpark-cards__card {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	padding: 0 15px 70px;
+}
+.carpark-cards__img {
+	position: relative;
+	width: 80%;
+}
+.carpark-cards__img img {
+	width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px 0 0 20px;
+}
+.carpark-cards__btn {
+	position: absolute;
+	bottom: 15px;
+	left: 15px;
+	background: #00566dc2;
+	color: #fff;
+	font-size: 22px;
+	padding: 12px 35px;
+}
+.carpark-cards__info {
+	background: #00566d;
+	color: #fff;
+	padding: 15px;
+	box-shadow: inset rgba(0,0,0,.5) -5px 0px 15px, rgba(0,0,0,.8) 4px 0px 0px -4px;
+	border-radius: 0 20px 20px 0;
+}
+.carpark-cards__title {
+	margin-bottom: 20px;
+	display: inline-block;
+}
+.carpark-cards__info p {
+	margin-bottom: 25px;
+	font-size: 20px;
+}
+/*-- footer --*/
+.footer {
+	background: #7e7373;
+	padding: 70px 0 30px;
+}
+.footer p {
+	color: #fff;
+}
+.footer-contacts a,
+.footer-contacts i {
+	display: block;
+	color: #fff;
+}
+.footer-contacts i {
+	margin-bottom: 20px;
+	font-size: 30px;
+	text-shadow: 0px 4px 12px rgba(0, 0, 0, .5);
+}
+.footer-contacts a {
+	padding: 5px 0;
+}
+.footer-contacts a:hover {
+	color: #00566d;
+}
+.footer-contacts {
+	text-align: center;
+}
+.footer-copy {
+	margin-top: 70px;
+}
 /*-- название --*/
 /*-- название --*/
 /*-- название --*/
 
 
 /*-- MEDIA QUERIES --*/
+/*-- 1700-1800px col-lg --*/
+@media screen and (max-width: 1800px) {
+	.advantages:before {
+	    width: 87%;
+	}
+	.services:before {
+	    width: 92%;
+	}
+	.carpark:before {
+	    width: 50%;
+	    left: -71.6%;
+	}
+}
+/*-- 1600-1700px col-lg --*/
+@media screen and (max-width: 1700px) {
+	.container {
+	    max-width: 1300px;
+	}
+	h2 {
+	    font-size: 37px;
+	}
+	.section-title:before {
+	    width: 115%;
+	}
+	.section-title_length:before {
+		width: 125%;
+	}
+	.section-title_length:before {
+	    width: 400px;
+	}
+	.header:before {
+	    width: 54%;
+	    right: -17.8%;
+	}
+	.fotorama__nav-wrap {
+	    top: 180px;
+	    left: -260px;
+	}
+	.advantages:before {
+	    width: 89%;
+	    right: -18.1%;
+	}
+	.advantages-bg {
+	    width: 1070px;
+	}
+	.advantages-bg img {
+		width: 100%;
+	}
+	.carpark:before {
+	    width: 47%;
+	    left: -72.1%;
+	}
+	.carpark-tabs__tab {
+	    padding: 15px 35px;
+	}
+	
+}
 /*-- 992-1200px col-lg --*/
 @media screen and (max-width: 1600px) {
 	.container {
@@ -204,11 +587,223 @@ button:focus {
 	h1 {
 		font-size: 60px;
 	}
+	.navigation {
+	    padding-right: 140px;
+	}
+	.header:before {
+	    right: -18.5%;
+	}
+	.fotorama__stage {
+		min-height: 625px;
+	}
+	.advantages:before {
+	    right: -16.1%;
+	}
+	.carpark:before {
+	    left: -77.3%;
+	}
 }
-/*-- 992-1200px col-lg --*/
+/*-- 1400-1500px col-lg --*/
+@media screen and (max-width: 1500px) {
+	.logo {
+	    max-width: 230px;
+	}
+	.navigation {
+	    padding-right: 85px;
+	}
+	.navigation-menu {
+	    width: 530px;
+	}
+	.navigation-menu li a {
+	    font-size: 20px;
+	}
+	.header:before {
+	    width: 52%;
+	    right: -17.4%;
+	}
+	.fotorama__nav-wrap {
+	    top: 165px;
+	    left: -230px;
+	}
+	h1 {
+	    font-size: 50px;
+	}
+	h2 {
+	    font-size: 30px;
+	}
+	.home-offer__subtitle {
+	    font-size: 27px;
+	    margin: 15px 0;
+	}
+	p {
+	    font-size: 20px;
+	}
+	.btn {
+	    font-size: 23px;
+	}
+	.fotorama__nav__frame.fotorama__active .fotorama__dot, 
+	.fotorama__dot,
+	.icon-point:before {
+	    width: 12px;
+	    height: 12px;
+	}
+	.fotorama__nav--dots .fotorama__nav__frame {
+	    width: 50px;
+	}
+	.fotorama__nav-wrap {
+	    top: 175px;
+	    left: -235px;
+	}
+	.fotorama__stage {
+		min-height: 550px;
+	}
+	.home-slide__head {
+	    left: 60%;
+	}
+	.home-slide__list li {
+	    margin-bottom: 10px;
+	    margin-left: 0;
+	}
+	.home-slide__list li:nth-child(2) {
+	    margin-left: 25px;
+	}
+	.home-slide__list li:nth-child(1) {
+	    margin-left: 50px;
+	}
+	.home-slide__icon span div {
+		width: 95px;
+	}
+	.home-slide__icon span div img {
+		width: 100%;
+	}
+	.home-slide__icon span p {
+	    color: #000;
+	    margin: 0 40px 0 15px;
+	}
+	.advantages:before {
+	    right: -19.3%;
+	}
+
+	.services:before {
+	    width: 95%;
+	}
+	.services-card__subtext {
+	    min-height: 180px;
+	    padding: 35px 10px;
+	}
+
+
+
+	.carpark:before {
+	    left: -82.3%;
+	}
+	.carpark-tabs__tab {
+	    padding: 10px 30px;
+	    font-size: 22px;
+	}
+}
+/*-- 1200-1400px col-lg --*/
 @media screen and (max-width: 1400px) {
 	.container {
 		max-width: 1100px;
+	}
+	.header:before {
+	    width: 57%;
+    	right: -22.1%;
+	}
+	.fotorama__nav-wrap {
+	    top: 135px;
+	    left: -210px;
+	}
+	.advantages:before {
+	    right: -21.6%;
+	    width: 95%;
+	}
+	.advantages-bg {
+	    bottom: 20px;
+	}
+
+	.services:before {
+	    width: 100%;
+	}
+
+
+	.carpark:before {
+	    left: -134.4%;
+	}
+	.carpark-cards__card {
+		flex-direction: column;
+	}
+	.carpark-cards__img {
+	    width: 100%;
+	}
+	.carpark-cards__img img {
+	    border-radius: 20px 20px 0 0;
+	}
+	.carpark-cards__info {
+	    border-radius: 0 0 20px 20px;
+	    padding: 20px 50px;
+	}
+	.carpark-cards__title {
+	    font-size: 25px;
+	    font-weight: 700;
+	}
+	.footer {
+	    padding: 40px 0 20px;
+	}
+}
+/*-- 1200-1400px col-lg --*/
+@media screen and (max-width: 1300px) {
+	.container {
+	    max-width: 1000px;
+	}
+	h2 {
+	    font-size: 28px;
+	}
+	.section-title:before {
+	    width: 115%;
+	    left: -65px;
+	}
+	.section-title_length:before {
+	    width: 280px;
+	}
+	.logo {
+	    max-width: 190px;
+	}
+	.navigation {
+	    padding-right: 70px;
+	}
+	.navigation-menu {
+	    width: 490px;
+	}
+	.navigation-menu li a {
+	    font-size: 17px;
+	}
+	.header:before {
+	    right: -22.5%;
+	}
+	.fotorama__nav-wrap {
+	    top: 130px;
+	    left: -195px;
+	}
+	.fotorama__stage {
+		min-height: 510px;
+	}
+	.advantages:before {
+	    right: -25.1%;
+	    width: 100%;
+	}
+	
+
+	.services-card {
+	    padding: 0;
+	}
+	.carpark:before {
+	    left: -142.8%;
+	}
+	.carpark-tabs__tab {
+	    padding: 10px 22px;
+	    font-size: 20px;
 	}
 }
 /*-- 992-1200px col-lg --*/
@@ -216,10 +811,168 @@ button:focus {
 	.container {
 		max-width: 960px;
 	}
+	.logo {
+	    max-width: 180px;
+	}
+	h1 {
+	    font-size: 45px;
+	}
+	h3 {
+	    font-size: 26px;
+	}
+	.section-title:before {
+	    width: 104%;
+	    left: -15px;
+	}
+	.section-title_length:before {
+	    width: 200px;
+	}
+	.home-offer__subtitle {
+	    font-size: 24px;
+	}
+	.header:before {
+	    right: -23.3%;
+	    width: 58%;
+	}
+	.fotorama__nav-wrap {
+	    top: 115px;
+	    left: -155px;
+	}
+	.fotorama__stage {
+		min-height: 460px;
+	}
+	.home-slide__head {
+	    left: 64%;
+	    top: 12px;
+	}
+	.home-slide__list li {
+	    margin-bottom: 7px;
+	    font-size: 20px;
+	}
+	.advantages:before {
+	    width: 114%;
+	    right: -30.1%;
+	}
+	.advantages-bg {
+	    width: 85%;
+	}
+	.advantages-list li {
+	    margin-left: 0;
+	}
+	.price__list {
+	    margin-left: 0;
+	}
+	.services:before {
+	    width: 105%;
+	}
+	.carpark:before {
+	    left: -169.3%;
+	}
+	.carpark-tabs__tab {
+	    padding: 7px 13px;
+	    font-size: 19px;
+	}
+
 }
 /*-- 768-992px col-lg --*/
 @media screen and (max-width: 992px) {
-
+	h1 {
+	    font-size: 40px;
+	}
+	p {
+	    font-size: 18px;
+	}
+	.home-offer__subtitle {
+	    font-size: 20px;
+	}
+	.header:after {
+	    left: -55%;
+	    width: 100%;
+	    transform: skewX(15.5deg);
+	}
+	.header:before {
+	    right: -83.3%;
+    	width: 125%;
+	}
+	.home-offer {
+	    width: 100%;
+	    padding: 60px 0 50px 65px;
+	}
+	.btn {
+	    font-size: 22px;
+	    padding: 10px 35px;
+	}
+	.fotorama {
+		display: none;
+	}
+	.navigation {
+	    display: none;
+	}
+	.section-title:before {
+	    width: 100%;
+	    left: 0;
+	}
+	.section-title_length:before {
+	    width: 200px;
+	}
+	.advantages:before {
+	    width: 128%;
+	    right: -50.1%;
+	}
+	.check-list {
+	    padding: 5px;
+	    font-size: 14px;
+	}
+	.price__item p {
+	    font-size: 21px;
+	}
+	.services:before {
+	    width: 110%;
+	    right: 60%;
+	}
+	.services-form input {
+	    width: 230px;
+	    margin-right: 15px;;
+	}
+	.carpark:before {
+	    display: none;
+	}
+	.carpark-tabs {
+		flex-flow: wrap;
+		justify-content: center;
+		margin: 70px 0 70px;
+	}
+	.carpark-cards__card {
+	    padding: 0 0 70px;
+	}
+	.carpark-tabs__tab {
+	    padding: 10px 25px;
+	    margin-left: 25px;
+	    margin-bottom: 25px;
+	}
+	.carpark-cards__info {
+	    padding: 20px 25px;
+	}
+	.carpark-cards__btn {
+	    bottom: 10px;
+	    left: 4px;
+	    font-size: 20px;
+	    padding: 8px 20px;
+	}
+	.footer-contacts i {
+	    font-size: 25px;
+	}
+	.footer-contacts a,
+	.footer-contacts p,
+	.footer p {
+		font-size: 17px;
+	}
+	.footer-copy {
+	    margin-top: 30px;
+	}
+	.header:before, .advantages:before, .services:before, .carpark:before {
+	    transform: skewX(-19.5deg);
+	}
 }
 /*-- 575-768px col-lg --*/
 @media screen and (max-width: 768px) {
