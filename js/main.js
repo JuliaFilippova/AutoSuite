@@ -8,6 +8,29 @@ $('.js-close-window').on('click',function() {
     $('.carpark-cards-modal').hide();
 });
 
+// TAB SORT
+let tab = function () {
+    let tabSort = document.querySelectorAll('.carpark-tabs__tab'),
+        tabContent = document.querySelectorAll('.carpark-cards__card'),
+        tabName;
+    tabSort.forEach(item => {
+        item.addEventListener('click', selecttabSort)
+    });
+    function selecttabSort() {
+        tabSort.forEach(item => {
+            item.classList.remove('is-active');
+        });
+        this.classList.add('is-active');
+        tabName = this.getAttribute('data-tab-name');
+        selectTabContent(tabName);
+    }
+    function selectTabContent(tabName) {
+        tabContent.forEach(item => {
+            item.classList.contains(tabName) ? item.classList.add('is-active') : item.classList.remove('is-active');
+        })
+    }
+};
+tab();
 
 
 // //MODAL hamburger
@@ -59,29 +82,4 @@ $('.js-close-window').on('click',function() {
 // $('.js-close-window').on('click',function() {
 //     $('.carpark-cards-modal').hide();
 // });
-
-
-// TAB SORT
-let tab = function () {
-    let tabSort = document.querySelectorAll('.carpark-tabs__tab'),
-        tabContent = document.querySelectorAll('.carpark-cards__card'),
-        tabName;
-    tabSort.forEach(item => {
-        item.addEventListener('click', selecttabSort)
-    });
-    function selecttabSort() {
-        tabSort.forEach(item => {
-            item.classList.remove('is-active');
-        });
-        this.classList.add('is-active');
-        tabName = this.getAttribute('data-tab-name');
-        selectTabContent(tabName);
-    }
-    function selectTabContent(tabName) {
-        tabContent.forEach(item => {
-            item.classList.contains(tabName) ? item.classList.add('is-active') : item.classList.remove('is-active');
-        })
-    }
-};
-tab();
 

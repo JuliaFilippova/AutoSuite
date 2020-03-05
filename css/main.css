@@ -164,9 +164,9 @@ button:focus {
     position: fixed;
     right: 0;
     top: 0;
-    width: 27%;
+    width: 40%;
     height: 100%;
-    background: #434878e8;
+    background: #060606ab;
     padding: 70px 25px 40px;
     z-index: 1;
 }
@@ -178,14 +178,14 @@ button:focus {
     padding: 20px 0;
 }
 .menu-active {
-    color: #f3ca00!important;
+    color: #f3f361!important;
 }
 /*HAMBURGER*/
 .hamburger-navigation-menu {
 	padding: 0 10%;
 }
 .hamburger-navigation-menu li a:hover {
-	color: #f3ca00;
+	color: #f3f361;
 }
 .hamburger-navigation-menu li a {
 	color: #fff;
@@ -275,6 +275,9 @@ button:focus {
 .home-offer-slider {
 	height: 100%;
 	position: relative;
+}
+.home-slide__info_mobile {
+	display: none;
 }
 .fotorama {
 	width: 85%;
@@ -1146,7 +1149,7 @@ button:focus {
 	.header-overlay:after {
 	    left: -55%;
 	    width: 100%;
-	    transform: skewX(15.5deg);
+/*	    transform: skewX(15.5deg);*/
 	}
 	.header-overlay:before {
 	    right: -83.3%;
@@ -1162,6 +1165,60 @@ button:focus {
 	}
 	.fotorama {
 		display: none;
+	}
+	.home-slide__info_mobile {
+		display: block;
+		bottom: 25px;
+	}
+	.home-slide__info_mobile .home-slide__icon span {
+		position: relative;
+		margin-bottom: 25px;
+	}
+	.home-slide__info_mobile .home-slide__icon span:first-child {
+		margin-left: 135px;
+	}
+	.home-slide__info_mobile .home-slide__icon span:nth-child(2) {
+		margin-left: 105px;
+	}
+	.home-slide__info_mobile .home-slide__icon span:last-child {
+		margin-left: 70px;
+	}
+	.home-slide__info_mobile .home-slide__icon span:first-child:before {
+		width: 94%;
+	}
+	.home-slide__info_mobile .home-slide__icon span:before {
+		content: '';
+		position: absolute;
+		bottom: -6px;
+		left: -10px;
+		width: 95%;
+		height: 3px;
+		background: #00566d;
+	}
+	.home-slide__info_mobile .home-slide__icon {
+		margin-bottom: 30px;
+	}
+	.home-slide__icon span div {
+	    max-width: 45px;
+	}
+	.home-slide__icon span p {
+	    margin: 0 30px 0 15px;
+	    font-size: 15px;
+	}
+	.home-slide__list li:nth-child(1) {
+	    margin-left: 65px;
+	}
+	.home-slide__list li:nth-child(2) {
+	    margin-left: 45px;
+	}
+	.home-slide__list li:nth-child(3) {
+	    margin-left: 25px;
+	}
+	.home-slide__list li:nth-child(4) {
+	    margin-left: 5px;
+	}
+	.home-slide__list li:nth-child(5) {
+	    margin-left: -15px;
 	}
 	.navigation {
 	    display: none;
@@ -1190,8 +1247,8 @@ button:focus {
 	    width: 200px;
 	}
 	.advantages:before {
-	    width: 128%;
-	    right: -50.1%;
+	    width: 134%;
+	    right: -49.5%;
 	}
 	.check-list {
 	    padding: 5px;
@@ -1202,7 +1259,7 @@ button:focus {
 	}
 	.services:before {
 	    width: 110%;
-	    right: 60%;
+	    right: 70%;
 	}
 	.services-form input {
 	    width: 230px;
@@ -1244,12 +1301,120 @@ button:focus {
 	.footer-copy {
 	    margin-top: 30px;
 	}
-	.header-overlay:before, .advantages:before, .services:before, .carpark:before {
+	/*.header-overlay:before, .advantages:before, .services:before, .carpark:before {
 	    transform: skewX(-19.5deg);
-	}
+	}*/
 }
 /*-- 575-768px col-lg --*/
 @media screen and (max-width: 768px) {
+	h1 {
+	    font-size: 35px;
+	}
+	.nav-menu {
+	    padding: 15px 10px;
+	}
+	#menuToggle span {
+	    display: block;
+	    width: 35px;
+	    height: 3px;
+	    background: #000;
+	    border-radius: 5px;
+	    margin-left: auto;
+	    margin-bottom: 6px;
+	    cursor: pointer;
+	}
+	.header-overlay:after {
+	    left: -45%;
+	}
+	.logo {
+	    max-width: 145px;
+	}
+	.header-overlay:before {
+	    right: -81.3%;
+	}
+	.home-offer {
+	    width: 100%;
+	    padding: 25px 0 35px 30px;
+	}
+	.home-offer__subtitle {
+	    font-size: 17px;
+	}
+	.btn {
+	    font-size: 20px;
+	    padding: 8px 30px;
+	}
+	.home-offer__subtext {
+		font-size: 16px;
+	}
+	.home-slide__list li {
+	    margin-bottom: 4px;
+	    font-size: 15px;
+	}
+	.fotorama__nav__frame.fotorama__active .fotorama__dot, .fotorama__dot, .icon-point:before {
+	    width: 7px;
+	    height: 7px;
+	}
+	.icon-point {
+	    width: 8px;
+	    height: 8px;
+	    margin-top: 0px;
+	}
+	.home-slide__list li:nth-child(1) {
+	    margin-left: 10px;
+	}
+	.home-slide__list li:nth-child(2) {
+	    margin-left: -5px;
+	}
+	.home-slide__list li:nth-child(3) {
+	    margin-left: -20px;
+	}
+	.home-slide__list li:nth-child(4) {
+	    margin-left: -35px;
+	}
+	.home-slide__list li:nth-child(5) {
+	    margin-left: -50px;
+	}
+	.home-slide__info_mobile .home-slide__icon span:first-child {
+		margin-left: 110px;
+	}
+	.home-slide__info_mobile .home-slide__icon span:nth-child(2) {
+		margin-left: 70px;
+	}
+	.home-slide__info_mobile .home-slide__icon span:last-child {
+		margin-left: 35px;
+	}
+	.home-slide__info_mobile .home-slide__icon span:first-child:before {
+		width: 94%;
+	}
+	.home-slide__icon span div {
+	    max-width: 35px;
+	}
+	.home-slide__icon span p {
+	    margin: 0 20px 0 5px;
+	    font-size: 14px;
+	}
+	.home-slide__icon span p i {
+	    font-size: 10px;
+	}
+	.advantages:before {
+	    width: 200%;
+	    right: -69.8%;
+	}
+	.services:before {
+	    width: 220%;
+	    right: 260%;
+	}
+
+
+
+
+
+
+
+
+
+
+
 	.carpark-cards__card {
 	    width: 100%;
 	}
