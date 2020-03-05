@@ -4,6 +4,7 @@ body {
 	padding: 0;
 	color: #000;
 	font-size: 22px;
+	background: #e2ebf3;
 	
 }
 div, p, form, input, a, span, button {
@@ -66,12 +67,6 @@ button:focus {
 	max-width: 90%;
 	margin: auto;
 }
-.z-index {
-	z-index: 1;
-}
-.content-adv {
-	z-index: 1;
-}
 .btn {
 	font-size: 30px;
     text-transform: uppercase;
@@ -79,6 +74,128 @@ button:focus {
     padding: 15px 40px;
     background: #f3f361;
     border-radius: 50px;
+}
+/*MODAL MENU MODAL FORM*/
+#modal {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.52);
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 1;
+}
+.menu-modal {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 27%;
+    height: 100%;
+    background: #434878e8;
+    padding: 120px 35px 40px;
+    z-index: 1;
+}
+.modal-form,
+.modal-form_thank {
+	display: none;
+}
+/*thank modal*/
+.modal-form_thank,
+.modal-form {
+	position: fixed;
+	width: 400px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	padding: 70px 17px 30px;
+	box-sizing: border-box;
+	background-color: #30344dbf;
+	text-align: center;
+	margin-bottom: 45px;
+}
+.form-modal__title {
+	font-size: 25px;
+	font-weight: 500;
+	color: #fff;
+}
+.form-modal__subtitle {
+	font-size: 18px;
+	color: #fffefeba;
+	font-weight: 500;
+	margin-top: 30px;
+}
+.close-popup {
+	position: absolute;
+	top: 25px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+	cursor: pointer;
+}
+.close-popup:before {
+	content: '';
+	position: absolute;
+	width: 22px;
+	height: 1px;
+	background: #C4C4C4;
+	top: 5px;
+	left: -5px;
+	transform: rotate(-45deg);
+}
+.close-popup:after {
+	content: '';
+	position: absolute;
+	width: 22px;
+	height: 1px;
+	background: #C4C4C4;
+	top: 5px;
+	left: -5px;
+	transform: rotate(45deg);
+}
+.close-popup:hover:before,
+.close-popup:hover:after {
+	background: #fff;
+}
+/*modal menu*/
+.menu-modal {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 27%;
+    height: 100%;
+    background: #434878e8;
+    padding: 70px 25px 40px;
+    z-index: 1;
+}
+.menu-list li a {
+    font-size: 28px;
+    margin: auto;
+    display: block;
+    text-align: center;
+    padding: 20px 0;
+}
+.menu-active {
+    color: #f3ca00!important;
+}
+/*HAMBURGER*/
+.hamburger-navigation-menu {
+	padding: 0 10%;
+}
+.hamburger-navigation-menu li a:hover {
+	color: #f3ca00;
+}
+.hamburger-navigation-menu li a {
+	color: #fff;
+	font-size: 25px;
+	padding: 8px 0;
+    display: inline-block;
+}
+.hamburger-navigation-menu .menu-phone {
+	position: absolute;
+    bottom: 35px;
 }
 /*-- header --*/
 .header {
@@ -88,7 +205,7 @@ button:focus {
 	color: #fff;
 	position: relative;
 }
-.header:after {
+.header-overlay:after {
 	content: '';
 	position: absolute;
 	background: #0000007a;
@@ -99,15 +216,14 @@ button:focus {
 	transform: skewX(30.5deg);
 	z-index: -2;
 }
-.header:before {
+.header-overlay:before {
 	width: 50%;
 	right: -14.5%;
 }
 /*overlay fon*/
-.header:before,
+.header-overlay:before,
 .advantages:before,
-.services:before,
-.carpark:before {
+.services:before {
 	content: '';
 	position: absolute;
 	background: #ffffff87;
@@ -249,7 +365,7 @@ button:focus {
 }
 /*-- advantages --*/
 .advantages {
-	background: #e2ebf3;
+/*	background: #e2ebf3;*/
 	position: relative;
 	padding: 100px 0 200px;
 	z-index: 1;
@@ -365,14 +481,20 @@ button:focus {
 /*-- services --*/
 .services {
 	padding: 70px 0;
-	background: #e2ebf3;
+/*	background: #e2ebf3;*/
 	position: relative;
 	z-index: 1;
 }
 .services:before {
-	width: 90%;
-    right: 35%;
+	width: 120%;
+    right: 55%;
+    height: 190%;
 }
+/*.services:before {
+    width: 115%;
+    right: 95%;
+    height: 100%;
+}*/
 .services-form input {
 	width: 270px;
 	padding: 15px 20px;
@@ -409,13 +531,8 @@ button:focus {
 /*-- carpark --*/
 .carpark {
 	padding: 70px 0 50px;
-	background: #e2ebf3;
 	position: relative;
 	z-index: 1;
-}
-.carpark:before {
-	width: 55%;
-    left: -71.7%;
 }
 .carpark-tabs {
 	justify-content: space-between;
@@ -434,13 +551,20 @@ button:focus {
 	border-radius: 50px;
 	font-size: 25px;
 }
+.carpark-tabs__tab.is-active {
+    background: red;
+}
+.carpark-cards {
+	flex-flow: wrap;
+}
 .carpark-cards__card {
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
+	display: none;
 	padding: 0 15px 70px;
+	width: 50%;
+}
+.carpark-cards__card.is-active { 
+	display: flex;
+
 }
 .carpark-cards__img {
 	position: relative;
@@ -476,6 +600,77 @@ button:focus {
 	margin-bottom: 25px;
 	font-size: 20px;
 }
+.carpark-cards-modal {
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: #e2ebf3;
+	z-index: 444;
+	transition: all .5s;
+}
+.carpark-cards-modal:after {
+	content: '';
+	position: absolute;
+	background: #0000007a;
+	height: 100%;
+	top: 0;
+	left: -20%;
+    width: 80%;
+	transform: skewX(30.5deg);
+	z-index: -1;
+}
+.carpark-cards-modal-head .logo {
+    width: 100%;
+    max-width: 380px;
+}
+.carpark-cards-modal-head {
+	padding: 45px 45px 100px;
+}
+.carpark-cards-modal-head  .close-popup {
+    top: 80px;
+    right: 80px;
+    width: 90px;
+    height: 90px;
+    background: #f96575;
+    border-radius: 50%;
+    box-shadow: 0px 2px 14px 10px rgba(250, 250, 250, .8);
+}
+.carpark-cards-modal-head .close-popup:before,
+.carpark-cards-modal-head .close-popup:after {
+    width: 65px;
+    height: 8px;
+    background: #fffefe;
+    border-radius: 50px;
+    top: 40px;
+    left: 12px;
+}
+.carpark-cards-modal__text .carpark-cards__title,
+.carpark-cards-modal__text p {
+    margin-bottom: 0;
+    color: #fff;
+}
+.carpark-cards-modal__text .carpark-wrap {
+	max-width: 440px;
+}
+.carpark-cards-modal__btn {
+	display: inline-table;
+	margin-top: 60px;
+	font-size: 35px;
+	padding: 20px 55px;
+}
+.carpark-cards-modal__gallery {
+	margin-top: 20px;
+}
+.carpark-cards-modal__gallery img {
+	width: 100%;
+    max-width: 460px;
+    margin: 10px;
+    border-radius: 35px;
+    box-shadow: 0px 2px 14px 10px rgba(250, 250, 250, .2);
+}
 /*-- footer --*/
 .footer {
 	background: #7e7373;
@@ -506,8 +701,60 @@ button:focus {
 .footer-copy {
 	margin-top: 70px;
 }
-/*-- название --*/
-/*-- название --*/
+/*-- PAGE NAWLYWEDS end CONTACTS --*/
+.header-blur {
+	position: relative;
+	background: url('../img/bg-page2.png') no-repeat center /cover;
+	color: #fff;
+}
+.header-blur .navigation-menu li a {
+    color: #fff;
+}
+.nawlyweds,
+.contacts {
+	padding: 45px 0 20px;
+}
+.nawlyweds .section-title:before,
+.contacts .section-title:before  {
+	width: 105%;
+	background: #fff;
+}
+.nawlyweds .section-title {
+	margin-bottom: 30px;
+}
+.nawlyweds-text li {
+	margin-bottom: 40px;
+	font-size: 25px;
+}
+.nawlyweds-text li:nth-child(1) {
+	max-width: 65%;
+}
+.nawlyweds-text li:nth-child(2) {
+	max-width: 80%;
+}
+.nawlyweds-text li:nth-child(3) {
+	max-width: 75%;
+}
+.nawlyweds-text li:nth-child(4) {
+	max-width: 100%;
+}
+/*-- contacts --*/
+.contacts-text li {
+	margin-bottom: 8px;
+	font-size: 23px;
+}
+.contacts-text {
+	margin-top: 25px;
+}
+.contacts-text li a {
+	margin-bottom: 8px;
+	font-size: 20px;
+	display: block;
+	color: #fff;
+}
+.contacts-text li:nth-child(1) {
+	margin-bottom: 20px;
+}
 /*-- название --*/
 
 
@@ -542,7 +789,7 @@ button:focus {
 	.section-title_length:before {
 	    width: 400px;
 	}
-	.header:before {
+	.header-overlay:before {
 	    width: 54%;
 	    right: -17.8%;
 	}
@@ -580,7 +827,7 @@ button:focus {
 	.navigation {
 	    padding-right: 140px;
 	}
-	.header:before {
+	.header-overlay:before {
 	    right: -18.5%;
 	}
 	.fotorama__stage {
@@ -591,6 +838,14 @@ button:focus {
 	}
 	.carpark:before {
 	    left: -77.3%;
+	}
+	/*page nawlyweds*/
+	.nawlyweds-text li,
+	.contacts-text li {
+	    font-size: 21px;
+	}
+	.nawlyweds-text li {
+	    margin-bottom: 35px;
 	}
 }
 /*-- 1400-1500px col-lg --*/
@@ -607,7 +862,7 @@ button:focus {
 	.navigation-menu li a {
 	    font-size: 20px;
 	}
-	.header:before {
+	.header-overlay:before {
 	    width: 52%;
 	    right: -17.4%;
 	}
@@ -697,7 +952,7 @@ button:focus {
 	.container {
 		max-width: 1100px;
 	}
-	.header:before {
+	.header-overlay:before {
 	    width: 57%;
     	right: -22.1%;
 	}
@@ -769,7 +1024,7 @@ button:focus {
 	.navigation-menu li a {
 	    font-size: 17px;
 	}
-	.header:before {
+	.header-overlay:before {
 	    right: -22.5%;
 	}
 	.fotorama__nav-wrap {
@@ -794,6 +1049,19 @@ button:focus {
 	.carpark-tabs__tab {
 	    padding: 10px 22px;
 	    font-size: 20px;
+	}
+	/*page nawlyweds*/
+	.nawlyweds-text li:nth-child(1) {
+	    max-width: 75%;
+	}
+	.nawlyweds-text li:nth-child(2) {
+	    max-width: 90%;
+	}
+	.nawlyweds-text li:nth-child(3) {
+	    max-width: 85%;
+	}
+	.footer-contacts a {
+	    font-size: 18px;
 	}
 }
 /*-- 992-1200px col-lg --*/
@@ -820,7 +1088,7 @@ button:focus {
 	.home-offer__subtitle {
 	    font-size: 24px;
 	}
-	.header:before {
+	.header-overlay:before {
 	    right: -23.3%;
 	    width: 58%;
 	}
@@ -875,12 +1143,12 @@ button:focus {
 	.home-offer__subtitle {
 	    font-size: 20px;
 	}
-	.header:after {
+	.header-overlay:after {
 	    left: -55%;
 	    width: 100%;
 	    transform: skewX(15.5deg);
 	}
-	.header:before {
+	.header-overlay:before {
 	    right: -83.3%;
     	width: 125%;
 	}
@@ -897,6 +1165,22 @@ button:focus {
 	}
 	.navigation {
 	    display: none;
+	}
+	/*hamburger*/
+	#menuToggle span {
+	    display: block;
+	    width: 45px;
+	    height: 5px;
+	    background: #000;
+	    border-radius: 5px;
+	    margin-left: auto;
+	    margin-bottom: 8px;
+	    cursor: pointer;
+	}
+	.hamburger {
+	    margin-top: 6px;
+	    cursor: pointer;
+	    margin-left: auto;
 	}
 	.section-title:before {
 	    width: 100%;
@@ -933,7 +1217,7 @@ button:focus {
 		margin: 70px 0 70px;
 	}
 	.carpark-cards__card {
-	    padding: 0 0 70px;
+	    padding: 0 15px 70px;
 	}
 	.carpark-tabs__tab {
 	    padding: 10px 25px;
@@ -960,21 +1244,45 @@ button:focus {
 	.footer-copy {
 	    margin-top: 30px;
 	}
-	.header:before, .advantages:before, .services:before, .carpark:before {
+	.header-overlay:before, .advantages:before, .services:before, .carpark:before {
 	    transform: skewX(-19.5deg);
 	}
 }
 /*-- 575-768px col-lg --*/
 @media screen and (max-width: 768px) {
+	.carpark-cards__card {
+	    width: 100%;
+	}
 
 }
 /*-- 420-575px col-lg --*/
 @media screen and (max-width: 575px) {
+	.nawlyweds-text li {
+	    font-size: 18px;
+	}
 
 }
 /*-- 320-420px col-lg --*/
 @media screen and (max-width: 420px) {
-	
+	h2 {
+	    font-size: 25px;
+	}
+	.nawlyweds-text li,
+	.contacts-text li {
+	    font-size: 16px;
+	}
+	.nawlyweds-text li {
+	    margin-bottom: 20px;
+	}
+	.nawlyweds-text li:nth-child(1) {
+	    max-width: 100%;
+	}
+	.nawlyweds-text li:nth-child(2) {
+	    max-width: 100%;
+	}
+	.nawlyweds-text li:nth-child(3) {
+	    max-width: 100%;
+	}
 }
 /*-- 320-420px col-lg --*/
 @media screen and (max-width: 320px) {
