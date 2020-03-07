@@ -1689,7 +1689,6 @@ button:focus {
 	    padding: 50px 0 25px;
 	}
 	.services:before {
-	    width: 110%;
 	    right: 120%;
 	}
 	.form-input {
@@ -1789,7 +1788,11 @@ button:focus {
 		transform: skewX(19.5deg);
 	}
 	.advantages:before, .services:before {
-	    transform: skewX(-19.5deg);
+	    transform: skewX(-14.5deg);
+	    opacity: 0.7;
+	}
+	.services:before {
+	    right: 200%;
 	}
 	/*.header-overlay:before {
 	    width: 128%;
@@ -1871,9 +1874,6 @@ button:focus {
 	.home-slide__list li:nth-child(5) {
 	    margin-left: -40px;
 	}*/
-	.advantages:before {
-	    width: 184%;
-	}
 	.price__item p {
 	    font-size: 19px;
 	}
@@ -1964,9 +1964,6 @@ button:focus {
 	.home-slide__list li:nth-child(5) {
 	    margin-left: -50px;
 	}*/
-	.advantages:before {
-	    width: 173%;
-	}
 	.advantages-list li:nth-child(3) {
 	    max-width: 100%;
 	}
@@ -1988,10 +1985,7 @@ button:focus {
 	.carpark-cards__img .btn {
 	    padding: 10px 40px;
 	}
-	.services:before {
-	    width: 110%;
-	    right: 250%;
-	}
+	
 	.nawlyweds-text li,
 	.contacts-text li {
 	    font-size: 16px;
