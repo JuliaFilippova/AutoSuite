@@ -997,7 +997,7 @@ body.modal-open {
 	    margin-bottom: 35px;
 	}
 	.carpark-cards-modal-head .logo {
-	    max-width: 260px;
+	    max-width: 210px;
 	}
 	.carpark-cards-modal-head .close-popup {
 	    top: 55px;
@@ -1012,9 +1012,16 @@ body.modal-open {
 	    top: 33px;
 	    left: 12px;
 	}
+	.carpark-cards-modal-head {
+	    padding: 15px 25px 60px;
+	}
 	.carpark-cards-modal__btn {
-	    padding: 15px 45px;
-	    margin-left: 35px;
+	    padding: 12px 35px;
+    	margin-left: 35px;
+    	font-size: 27px;
+	}
+	.carpark-cards-modal__text .carpark-cards__title, .carpark-cards-modal__text p {
+	    font-size: 18px;
 	}
 }
 /*-- 1400-1500px col-lg --*/
