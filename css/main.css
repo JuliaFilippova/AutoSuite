@@ -1018,10 +1018,13 @@ body.modal-open {
 	.carpark-cards-modal__btn {
 	    padding: 12px 35px;
     	margin-left: 35px;
-    	font-size: 27px;
+    	font-size: 25px;
 	}
 	.carpark-cards-modal__text .carpark-cards__title, .carpark-cards-modal__text p {
 	    font-size: 18px;
+	}
+	.car-modal__gallery img {
+	    max-width: 25%;
 	}
 }
 /*-- 1400-1500px col-lg --*/
