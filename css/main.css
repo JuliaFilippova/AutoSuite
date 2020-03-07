@@ -209,7 +209,7 @@ body.modal-open {
 	box-sizing: border-box;
 	background-color: #00000099;
 	text-align: center;
-	z-index: 99999;
+	z-index: 999999;
 	border-radius: 20px;
 }
 .modal-form_thank {
