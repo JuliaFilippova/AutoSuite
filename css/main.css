@@ -1780,7 +1780,9 @@ button:focus {
 /*-- 420-575px col-lg --*/
 @media screen and (max-width: 575px) {
 	h1 {
-	    font-size: 41px;
+	    font-size: 43px;
+	}
+	.home-offer__title {
 	    text-shadow: none;
 	}
 	.header-overlay:after {
@@ -1801,7 +1803,7 @@ button:focus {
 	}
 	.btn {
 	    font-size: 19px;
-	    padding: 8px 33px;
+	    padding: 10px 33px;
 	}
 	.header-overlay:before {
 	    display: none;
@@ -1814,7 +1816,7 @@ button:focus {
 		display: none;
 	}
 	.home-offer {
-	    padding: 55px 0 55px 25px;
+	    padding: 50px 0 80px 25px;
 	}
 	.home-offer__subtitle {
 	   	font-size: 20px;
@@ -1915,10 +1917,10 @@ button:focus {
 /*-- 320-420px col-lg --*/
 @media screen and (max-width: 414px) {
 	h2 {
-	    font-size: 21px;
+	    font-size: 22px;
 	}
 	p {
-	    font-size: 15px;
+	    font-size: 16px;
 	}
 	.header-overlay:after {
 	    left: -130px;
@@ -1930,9 +1932,7 @@ button:focus {
 	/*.header-overlay:before {
 	    width: 130%;
 	}*/
-	.home-offer {
-	    padding: 25px 0 35px 20px;
-	}
+	
 	/*.home-offer__btn {
 	    margin-bottom: 15px;
 	    padding: 6px 20px;
@@ -2008,9 +2008,6 @@ button:focus {
 	.nawlyweds-text li:nth-child(3) {
 	    max-width: 100%;
 	}
-	.menu-modal {
-	    max-height: 55%;
-	}
 	.carpark-cards-modal:after {
 	    transform: skewX(16.5deg);
 	}
@@ -2033,6 +2030,9 @@ button:focus {
 	.carpark-cards-modal-head .close-popup {
 	    top: 10px;
 	    right: 20px;
+	}
+	.menu-modal {
+	    max-height: 57%;
 	}
 }
 /*-- 320-420px col-lg --*/
