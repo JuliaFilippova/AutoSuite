@@ -64,6 +64,9 @@ button:focus {
 .scroll-hidden {
 	overflow-x: hidden;
 }
+body.modal-open {
+    overflow: hidden;
+}
 .container {
 	max-width: 1500px;
 }
@@ -198,7 +201,7 @@ button:focus {
 .modal-form_thank,
 .modal-form {
 	position: fixed;
-	width: 400px;
+	width: 37%;
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
@@ -278,7 +281,7 @@ button:focus {
     top: 0;
     left: 0;
     width: 100%;
-    max-height: 45%;
+    max-height: 55%;
     height: 100%;
     background: #060606de;
     padding: 25px 25px 20px;
@@ -297,17 +300,20 @@ button:focus {
 
 }
 /*menuFIXED*/
-.nav-menu.fixed_menu {
+.fixed_menu {
    	position: fixed;
    	top: 0;
    	left: 0;
    	right: 0;
     transition: 0.2s top ease-in;
-    background: red;
+    background: #02020285;
     padding: 20px 0;
     height: 75px;
-    z-index: 9999;
+    z-index: 999999;
     box-shadow: 0px 4px 4px rgba(35, 49, 66, 0.04);
+}
+.fixed_menu .navigation-menu li a {
+	color: #fff;
 }
 /*HAMBURGER*/
 .hamburger-navigation-menu {
@@ -334,9 +340,9 @@ button:focus {
 .header {
 	background: url('../img/header-bg.png') no-repeat center /cover;
 	position: relative;
-	z-index: 1;
 	color: #fff;
 	position: relative;
+	z-index: 1;
 }
 .header-overlay:after {
 	content: '';
@@ -515,10 +521,8 @@ button:focus {
 }
 /*-- advantages --*/
 .advantages {
-/*	background: #e2ebf3;*/
 	position: relative;
 	padding: 100px 0 200px;
-	z-index: 1;
 }
 .advantages:before {
 	width: 85%;
@@ -602,15 +606,7 @@ button:focus {
 }
 .price__item p {
 	font-size: 23px;
-/*	position: relative;*/
 }
-/*.price__item p:after {
-	content: '';
-	position: absolute;
-	width: 15px;
-	height: 15px;
-	background: #22d6b7;
-}*/
 .icon-point {
 	position: relative;
 	width: 20px;
@@ -631,32 +627,25 @@ button:focus {
 /*-- services --*/
 .services {
 	padding: 70px 0;
-/*	background: #e2ebf3;*/
 	position: relative;
-	z-index: 1;
 }
 .services:before {
 	width: 120%;
     right: 55%;
     height: 190%;
 }
-/*.services:before {
-    width: 115%;
-    right: 95%;
-    height: 100%;
-}*/
 .form-input {
 	width: 270px;
 	position: relative;
 	box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, .5);
 	border-radius: 50px;
+	margin-right: 30px;
 }
-.services-form input {
+.form-input input {
 	width: 100%;
 	padding: 15px 20px;
 	border-radius: 50px;
 	border: none;
-	margin-right: 30px;
 	outline: none;
 	display: inline-block;
 }
@@ -690,7 +679,6 @@ button:focus {
 .carpark {
 	padding: 70px 0 50px;
 	position: relative;
-	z-index: 1;
 }
 .carpark-tabs {
 	justify-content: space-between;
@@ -726,7 +714,6 @@ button:focus {
 }
 .carpark-cards__card.is-active { 
 	display: flex;
-
 }
 .carpark-cards__img {
 	position: relative;
@@ -773,20 +760,13 @@ button:focus {
 	position: fixed;
 	top: 0;
 	left: 0;
-	background: #e2ebf3;
+	background: url('../img/car-modal-fon.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 	z-index: 444;
 	transition: all .5s;
-}
-.carpark-cards-modal:after {
-	content: '';
-	position: absolute;
-	background: #0000007a;
-	height: 100%;
-	top: 0;
-	left: -20%;
-    width: 80%;
-	transform: skewX(30.5deg);
-	z-index: -1;
+	overflow: auto;
 }
 .carpark-cards-modal-head .logo {
     width: 100%;
@@ -827,15 +807,18 @@ button:focus {
 	font-size: 35px;
 	padding: 20px 55px;
 }
-.carpark-cards-modal__gallery {
+.car-modal__gallery {
 	margin-top: 20px;
 }
-.carpark-cards-modal__gallery img {
+.car-modal__gallery img {
 	width: 100%;
-    max-width: 460px;
+    max-width: 30%;
     margin: 10px;
     border-radius: 35px;
     box-shadow: 0px 2px 14px 10px rgba(250, 250, 250, .2);
+}
+.carpark-cards-modal__gallery {
+	display: none;
 }
 /*-- footer --*/
 .footer {
@@ -924,9 +907,6 @@ button:focus {
 .contacts-text li:nth-child(1) {
 	margin-bottom: 20px;
 }
-/*-- название --*/
-
-
 /*-- MEDIA QUERIES --*/
 /*-- 1700-1800px col-lg --*/
 @media screen and (max-width: 1800px) {
@@ -983,7 +963,6 @@ button:focus {
 	.carpark-tabs__tab {
 	    padding: 15px 35px;
 	}
-	
 }
 /*-- 992-1200px col-lg --*/
 @media screen and (max-width: 1600px) {
@@ -1036,9 +1015,6 @@ button:focus {
 	.carpark-cards-modal__btn {
 	    padding: 15px 45px;
 	    margin-left: 35px;
-	}
-	.carpark-cards-modal__gallery img {
-	    max-width: 380px;
 	}
 }
 /*-- 1400-1500px col-lg --*/
@@ -1121,7 +1097,6 @@ button:focus {
 	.advantages:before {
 	    right: -19.3%;
 	}
-
 	.services:before {
 	    width: 95%;
 	}
@@ -1129,9 +1104,6 @@ button:focus {
 	    min-height: 180px;
 	    padding: 35px 10px;
 	}
-
-
-
 	.carpark:before {
 	    left: -82.3%;
 	}
@@ -1160,7 +1132,6 @@ button:focus {
 	.advantages-bg {
 	    bottom: 20px;
 	}
-
 	.services:before {
 	    width: 100%;
 	}
@@ -1231,8 +1202,6 @@ button:focus {
 	    right: -25.1%;
 	    width: 100%;
 	}
-	
-
 	.services-card {
 	    padding: 0;
 	}
@@ -1265,9 +1234,6 @@ button:focus {
 	.carpark-cards-modal-head .close-popup {
 	    top: 20px;
 	    right: 40px;
-	}
-	.carpark-cards-modal__gallery img {
-	    max-width: 345px;
 	}
 }
 /*-- 992-1200px col-lg --*/
@@ -1359,10 +1325,6 @@ button:focus {
 	.carpark-cards-modal__btn {
 	    padding: 13px 30px;
 	}
-	.carpark-cards-modal__gallery img {
-	    max-width: 275px;
-	}
-
 }
 /*-- 768-992px col-lg --*/
 @media screen and (max-width: 992px) {
@@ -1378,7 +1340,6 @@ button:focus {
 	.header-overlay:after {
 	    left: -55%;
 	    width: 100%;
-/*	    transform: skewX(15.5deg);*/
 	}
 	.header-overlay:before {
 	    right: -83.3%;
@@ -1541,8 +1502,8 @@ button:focus {
 	    font-size: 21px;
 	    padding: 10px 23px;
 	}
-	.carpark-cards-modal__gallery img {
-	    max-width: 210px;
+	.car-modal__gallery img {
+	    max-width: 45%;
 	}
 }
 /*-- 575-768px col-lg --*/
@@ -1642,7 +1603,6 @@ button:focus {
 	    margin: 0 20px 0 5px;
 	    font-size: 14px;
 	}
-
 	.home-slide__icon span p i {
 	    font-size: 10px;
 	}
@@ -1754,12 +1714,8 @@ button:focus {
 	.footer-contacts a, .footer-contacts p, .footer p {
 	    font-size: 15px;
 	}
-	.menu-modal {
-	    max-height: 35%;
-	}
-	.carpark-cards-modal:after {
-	    left: -35%;
-	    width: 100%;
+	.carpark-cards-modal {
+		background-position: 34%;
 	}
 	.carpark-cards-modal-head .close-popup {
 	    width: 40px;
@@ -1769,9 +1725,6 @@ button:focus {
 	    width: 28px;
 	    top: 20px;
 	    left: 7px;
-	}
-	.carpark-cards-modal__gallery img {
-	    max-width: 235px;
 	}
 }
 /*-- 420-575px col-lg --*/
@@ -1790,11 +1743,8 @@ button:focus {
 	    opacity: 0.7;
 	}
 	.services:before {
-	    right: 200%;
+	    right: 140%;
 	}
-	/*.header-overlay:before {
-	    width: 128%;
-	}*/
 	#menuToggle span {
 	    width: 40px;
 	    height: 4px;
@@ -1831,54 +1781,13 @@ button:focus {
 	.home-offer__subtext {
 	    font-size: 14px;
 	}
-	/*.home-slide__info_mobile {
-	    bottom: 40px;
-	}*/
-	/*.home-slide__list li {
-    	margin-bottom: 0px;
-	    font-size: 12px;
-	}
-	.home-slide__icon span div {
-	    display: none!important;
-	}
-	.home-slide__icon span p {
-	    font-size: 12px;
-	}
-	.home-slide__info_mobile .home-slide__icon span:before {
-	    height: 2px;
-	    left: 0;
-	}
-	.home-slide__info_mobile .home-slide__icon span:first-child {
-	    margin-left: 20px;
-	}
-	.home-slide__info_mobile .home-slide__icon span:nth-child(2) {
-	    margin-left: 6px;
-	}
-	.home-slide__info_mobile .home-slide__icon span:last-child {
-	    margin-left: -8px;
-	}
-	.home-slide__list li:nth-child(1) {
-	    margin-left: -13px;
-	}
-	.home-slide__list li:nth-child(2) {
-	    margin-left: -20px;
-	}
-	.home-slide__list li:nth-child(3) {
-	    margin-left: -26px;
-	}
-	.home-slide__list li:nth-child(4) {
-	    margin-left: -33px;
-	}
-	.home-slide__list li:nth-child(5) {
-	    margin-left: -40px;
-	}*/
 	.price__item p {
 	    font-size: 19px;
 	}
 	.form-input {
 	    width: 80%;
 	    display: block;
-	    margin-bottom: 20px;
+	    margin-bottom: 30px;
 	}
 	.services-form .btn {
 	    font-size: 22px;
@@ -1899,13 +1808,8 @@ button:focus {
 	.nawlyweds-text li {
 	    font-size: 18px;
 	}
-	.carpark-cards-modal:after {
-	    left: -35%;
-	    width: 110%;
-	    transform: skewX(20.5deg);
-	}
-	.carpark-cards-modal__gallery img {
-	    max-width: 85%;
+	.car-modal__gallery img {
+	    max-width: 90%;
 	}
 	.modal-form_thank {
 		width: 95%;
@@ -1913,7 +1817,9 @@ button:focus {
 	.modal-form {
 	    width: 90%;
 	}
-
+	.carpark-cards-modal {
+	    background-position: 25%;
+	}
 }
 /*-- 320-420px col-lg --*/
 @media screen and (max-width: 414px) {
@@ -1927,44 +1833,6 @@ button:focus {
 	    left: -130px;
 	    width: 136%;
 	}
-	/*.header-overlay:after {
-	    left: -45%;
-	}*/
-	/*.header-overlay:before {
-	    width: 130%;
-	}*/
-	
-	/*.home-offer__btn {
-	    margin-bottom: 15px;
-	    padding: 6px 20px;
-	}*/
-	/*.home-slide__info_mobile {
-	    bottom: 30px;
-	}
-	.home-slide__info_mobile .home-slide__icon span:first-child {
-	    margin-left: 20px;
-	}
-	.home-slide__info_mobile .home-slide__icon span:nth-child(2) {
-	    margin-left: 4px;
-	}
-	.home-slide__info_mobile .home-slide__icon span:last-child {
-	    margin-left: -12px;
-	}
-	.home-slide__list li:nth-child(1) {
-	    margin-left: -24px;
-	}
-	.home-slide__list li:nth-child(2) {
-	    margin-left: -30px;
-	}
-	.home-slide__list li:nth-child(3) {
-	    margin-left: -36px;
-	}
-	.home-slide__list li:nth-child(4) {
-	    margin-left: -43px;
-	}
-	.home-slide__list li:nth-child(5) {
-	    margin-left: -50px;
-	}*/
 	.advantages-list li:nth-child(3) {
 	    max-width: 100%;
 	}
@@ -1986,7 +1854,6 @@ button:focus {
 	.carpark-cards__img .btn {
 	    padding: 10px 40px;
 	}
-	
 	.nawlyweds-text li,
 	.contacts-text li {
 	    font-size: 16px;
@@ -2003,9 +1870,6 @@ button:focus {
 	.nawlyweds-text li:nth-child(3) {
 	    max-width: 100%;
 	}
-	.carpark-cards-modal:after {
-	    transform: skewX(16.5deg);
-	}
 	.carpark-cards-modal-head {
 	    padding: 15px 5px 40px;
 	}
@@ -2018,9 +1882,6 @@ button:focus {
 	.carpark-cards-modal__btn {
 	   	margin-left: 0;
 	   	margin-top: 30px;
-	}
-	.carpark-cards-modal__gallery img {
-	    max-width: 93%;
 	}
 	.carpark-cards-modal-head .close-popup {
 	    top: 10px;
@@ -2035,19 +1896,4 @@ button:focus {
 	.advantages:before {
 	    width: 201%;
 	}
-	/*.home-slide__list li:nth-child(1) {
-	    margin-left: -27px;
-	}
-	.home-slide__list li:nth-child(2) {
-	    margin-left: -34px;
-	}
-	.home-slide__list li:nth-child(3) {
-	    margin-left: -40px;
-	}
-	.home-slide__list li:nth-child(5) {
-	    margin-left: -60px;
-	}
-	.home-slide__list li:nth-child(4) {
-	    margin-left: -50px;
-	}*/
 }

@@ -31,36 +31,40 @@ let tab = function () {
 };
 tab();
 
-
 // //MODAL hamburger
 $('#menuToggle').on('click',function() {
     $('.menu-modal').toggle();
     $('.modal').toggle();
+    $("body").addClass("modal-open");
 });
 //close bg
 $('.modal').on('click',function() {
     $('.menu-modal').hide();
     $('.modal').hide();
+    $("body").removeClass("modal-open");
 });
 //close bg
 $('.js-close-window').on('click',function() {
     $('.menu-modal').hide();
     $('.modal').hide();
+    $("body").removeClass("modal-open");
 });
 $('.hamburger-navigation-menu > li > a').on('click',function() {
     $('.menu-modal').hide();
     $('.modal').hide();
+    $("body").removeClass("modal-open");
 });
-
 //MODAL FORM
 $('.btnForm').on('click',function() {
     $('.modal-form').toggle();
     $('.modal').toggle();
+    $("body").addClass("modal-open"); 
 });
 //close bg
 $('.modal').on('click',function() {
     $('.modal-form').hide();
     $('.modal').hide();
+    $("body").removeClass("modal-open")
 });
 //close bg
 $('.js-close-window').on('click',function() {
@@ -80,12 +84,14 @@ $('.modal').on('click',function() {
 //MODAL sort carpark
 $('.carpark-cards__btn').on('click',function() {
     $('.carpark-cards-modal').toggle();
+    $("body").addClass("modal-open");
+}).on("hidden", function () {
+    $("body").removeClass("modal-open")
 });
 //close bg
 $('.js-close-window').on('click',function() {
     $('.carpark-cards-modal').hide();
 });
-
 //SCROLL TOP
 $(function() {
     $(window).scroll(function() {
@@ -102,37 +108,53 @@ $(function() {
     });
 });
 
-
 // SCROLL MENU FIXED HEAD
 const checkScroll = () => {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const menuDesktop = $('#menuFixed');
+    const menuFixed = $('#menuFixed');
     if (scrollTop > 100) {
-        menuDesktop.addClass('fixed_menu');
+        menuFixed.addClass('fixed_menu');
     } else {
-        menuDesktop.removeClass('fixed_menu');
+        menuFixed.removeClass('fixed_menu');
     }
 };
+window.addEventListener('scroll', checkScroll);
+// SCROLL BODY HREF
+$(".header a.transition-anchor").click(function (e) {
+    e.preventDefault();
 
+    let id        = $(this).attr('href'),
+        positions = $(id).offset();
+
+    if (!!positions.top) $('body,html').animate({scrollTop: positions.top}, 1500);
+});
 
 function getCar() {
-    let getImg = this.parentNode; // тут можно получить Картинку, если будут проблемы обращайся ) если нужно будет ещё и картинки получать и отрисовывать ) 
+    let getImg = this.parentNode.nextElementSibling.nextElementSibling.children;
     let getInfo = this.parentNode.nextElementSibling; // Получаем блок с информацией
     let getTitle = getInfo.querySelector('.carpark-cards__title').innerHTML; // ПОлучаем название машины
     let getSalon = getInfo.querySelector('.carpark-cards__salon').innerHTML; // Получаем салон
     let getPrice = getInfo.querySelector('.carpark-cards__price').innerHTML; // Получаем цену
     let getTrans = getInfo.querySelector('.carpark-cards__trans').innerHTML; // Получаем трансфер
 
-    show(getTitle, getSalon, getPrice, getTrans); // вызываем функцию отрисовки и передаём параметры
+    show(getTitle, getSalon, getPrice, getTrans, getImg); // вызываем функцию отрисовки и передаём параметры
 }
 
-function show(title, salon, price, trans) { // отрисовка в модалке
+function show(title, salon, price, trans, carGallery) { // отрисовка в модалке
     let homePage = document.querySelector('.carpark-cards-modal');
+    let carImg = document.querySelector('.car-modal__gallery');
     homePage.style.display = 'block';
     homePage.querySelector('.carpark-cards__title').innerHTML = title;
     homePage.querySelector('.carpark-cards__salon').innerHTML = salon;
     homePage.querySelector('.carpark-cards__price').innerHTML = price;
     homePage.querySelector('.carpark-cards__trans').innerHTML = trans;
+
+    carImg.innerHTML = '';
+    for (let k in carGallery) {
+
+    if (carGallery[k].tagName != 'IMG') return;
+    carImg.innerHTML += `<img src="${carGallery[k].src}">`;
+    }
 
     homePage.querySelector('.js-close-window').onclick = () => { // По клику закрываем окно
         homePage.style.display = 'none';
@@ -144,8 +166,6 @@ let order = document.getElementsByClassName('carpark-cards__btn'); // Получ
 for (let k in order) {
     order[k].onclick = getCar; // вешаем на все кнопки событие клика
 }
-
-
 
 //VALIDATE FORM
 const resetFormsErrors = () => {

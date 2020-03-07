@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title></title>
+	<title>АвтоЛюкс</title>
 	<!-- META Search -->
 	<meta name = "description" content = "">
 	<meta name = "keywords" content = "">
@@ -29,16 +29,18 @@
 	<div class="scroll-hidden">
 	<header class="header header-overlay" id="header">
 		<div class="nav-menu d-flex" id="menuFixed">
-			<img src="img/logo.png" alt="" class="logo">
+			<a href="/">
+				<img src="img/logo.png" alt="" class="logo">
+			</a>
 			<nav class="navigation">
 				<ul class="navigation-menu d-flex">
 					<li>
-						<a href="#carpark">
+						<a href="#carpark" class="transition-anchor">
 							Автопарк
 						</a>
 					</li>
 					<li>
-						<a href="#services">
+						<a href="#services" class="transition-anchor">
 							Услуги
 						</a>
 					</li>
@@ -133,11 +135,11 @@
 									<ul class="home-slide__list">
 										<li>
 											<i class="icon-point"></i>
-											Полная кондифициальность
+											Питьевая вода и влажные салфетки
 										</li>
 										<li>
 											<i class="icon-point"></i>
-											Питьевая вода и влажные салфетки
+											Полная кондифициальность
 										</li>
 										<li>
 											<i class="icon-point"></i>
@@ -175,7 +177,7 @@
 									<ul class="home-slide__list">
 										<li>
 											<i class="icon-point"></i>
-											Полная кондифициальность
+											Максимальный комфорт в поездке
 										</li>
 										<li>
 											<i class="icon-point"></i>
@@ -183,7 +185,7 @@
 										</li>
 										<li>
 											<i class="icon-point"></i>
-											Максимальный комфорт в поездке
+											Полная кондифициальность
 										</li>
 									</ul>
 									<div class="home-slide__icon">
@@ -514,12 +516,12 @@
 	            </span>
 			</div>
 			<!-- Модальное окно для всех карточек -->
-			<div class="carpark-cards-modal" id="carpark1">
+			<div class="carpark-cards-modal">
 				<div class="carpark-cards-modal-head">
 					<img src="img/logo.png" alt="Логотип" class="logo">
 					<div class="close-popup js-close-window"></div>
 				</div>
-				<div class="container">
+				<div class="container-wider">
 					<div class="carpark-cards-modal__text d-flex">
 						<div class="carpark-wrap">
 							<span class="carpark-cards__title"></span>
@@ -531,21 +533,16 @@
 							Заказать
 						</a>
 					</div>
-					<div class="carpark-cards-modal__gallery">
-						<img src="img/services1.png" alt="Изображение">
-						<img src="img/services1.png" alt="Изображение">
-						<img src="img/services1.png" alt="Изображение">
-						<img src="img/services1.png" alt="Изображение">
-					</div>
+					<div class="car-modal__gallery"></div>
 				</div>
 			</div>
 			<div class="carpark-cards d-flex">
 				<div class="carpark-cards__card is-active tab-all tab-jeep">
 					<div class="carpark-cards__img">
 						<img src="img/jeep/jeep1.jpg" alt="Автопарк">
-						<a href="#carpark1" class="carpark-cards__btn btn">
+						<div class="carpark-cards__btn btn">
 							Заказать
-						</a>
+						</div>
 					</div>
 					<div class="carpark-cards__info">
 						<span class="carpark-cards__title">
@@ -563,17 +560,21 @@
 							Аэропорт - город - 5500 руб <br> По городу - 3500 руб
 						</p>
 					</div>
-					<!-- <div class="carpark-cards-modal__gallery">
-						<img src="img/services1.png" alt="Изображение">
-						<img src="img/services1.png" alt="Изображение">
-					</div> -->
+					<!-- картинки для модалки -->
+					<div class="carpark-cards-modal__gallery">
+						<img src="img/jeep/jeep1.jpg" alt="Изображение">
+						<img src="img/jeep/jeep2.jpg" alt="Изображение">
+						<img src="img/jeep/jeep3.jpg" alt="Изображение">
+						<img src="img/jeep/jeep4.jpg" alt="Изображение">
+						<img src="img/jeep/jeep5.jpg" alt="Изображение">
+					</div>
 				</div>
 				<div class="carpark-cards__card is-active tab-all tab-sedan">
 					<div class="carpark-cards__img">
 						<img src="img/sedan/sedan1.jpg" alt="Автопарк">
-						<a href="#carpark1" class="carpark-cards__btn btn">
+						<div class="carpark-cards__btn btn">
 							Заказать
-						</a>
+						</div>
 					</div>
 					<div class="carpark-cards__info">
 						<span class="carpark-cards__title">
@@ -591,13 +592,21 @@
 							Аэропорт - город - 5500 руб <br> По городу - 3500 руб
 						</p>
 					</div>
+					<!-- картинки для модалки -->
+					<div class="carpark-cards-modal__gallery">
+						<img src="img/sedan/sedan1.jpg" alt="Изображение">
+						<img src="img/sedan/sedan2.jpg" alt="Изображение">
+						<img src="img/sedan/sedan3.jpg" alt="Изображение">
+						<img src="img/sedan/sedan4.jpg" alt="Изображение">
+						<img src="img/sedan/sedan5.jpg" alt="Изображение">
+					</div>
 				</div>
 				<div class="carpark-cards__card is-active tab-all tab-sedan">
 					<div class="carpark-cards__img">
 						<img src="img/sedan/sedan2.jpg" alt="Автопарк">
-						<a href="#carpark1" class="carpark-cards__btn btn">
+						<div class="carpark-cards__btn btn">
 							Заказать
-						</a>
+						</div>
 					</div>
 					<div class="carpark-cards__info">
 						<span class="carpark-cards__title">
@@ -615,13 +624,21 @@
 							Аэропорт - город - 5500 руб <br> По городу - 3500 руб
 						</p>
 					</div>
+					<!-- картинки для модалки -->
+					<div class="carpark-cards-modal__gallery">
+						<img src="img/sedan/sedan1.jpg" alt="Изображение">
+						<img src="img/sedan/sedan2.jpg" alt="Изображение">
+						<img src="img/sedan/sedan3.jpg" alt="Изображение">
+						<img src="img/sedan/sedan4.jpg" alt="Изображение">
+						<img src="img/sedan/sedan5.jpg" alt="Изображение">
+					</div>
 				</div>
 				<div class="carpark-cards__card is-active tab-all tab-sedan">
 					<div class="carpark-cards__img">
 						<img src="img/sedan/sedan3.jpg" alt="Автопарк">
-						<a href="#carpark1" class="carpark-cards__btn btn">
+						<div class="carpark-cards__btn btn">
 							Заказать
-						</a>
+						</div>
 					</div>
 					<div class="carpark-cards__info">
 						<span class="carpark-cards__title">
@@ -639,13 +656,21 @@
 							Аэропорт - город - 5500 руб <br> По городу - 3500 руб
 						</p>
 					</div>
+					<!-- картинки для модалки -->
+					<div class="carpark-cards-modal__gallery">
+						<img src="img/sedan/sedan1.jpg" alt="Изображение">
+						<img src="img/sedan/sedan2.jpg" alt="Изображение">
+						<img src="img/sedan/sedan3.jpg" alt="Изображение">
+						<img src="img/sedan/sedan4.jpg" alt="Изображение">
+						<img src="img/sedan/sedan5.jpg" alt="Изображение">
+					</div>
 				</div>
 				<div class="carpark-cards__card is-active tab-all tab-sedan">
 					<div class="carpark-cards__img">
 						<img src="img/sedan/sedan4.jpg" alt="Автопарк">
-						<a href="#carpark1" class="carpark-cards__btn btn">
+						<div class="carpark-cards__btn btn">
 							Заказать
-						</a>
+						</div>
 					</div>
 					<div class="carpark-cards__info">
 						<span class="carpark-cards__title">
@@ -663,13 +688,21 @@
 							Аэропорт - город - 5500 руб <br> По городу - 3500 руб
 						</p>
 					</div>
+					<!-- картинки для модалки -->
+					<div class="carpark-cards-modal__gallery">
+						<img src="img/sedan/sedan1.jpg" alt="Изображение">
+						<img src="img/sedan/sedan2.jpg" alt="Изображение">
+						<img src="img/sedan/sedan3.jpg" alt="Изображение">
+						<img src="img/sedan/sedan4.jpg" alt="Изображение">
+						<img src="img/sedan/sedan5.jpg" alt="Изображение">
+					</div>
 				</div>
 				<div class="carpark-cards__card is-active tab-all tab-jeep">
 					<div class="carpark-cards__img">
 						<img src="img/jeep/jeep2.jpg" alt="Автопарк">
-						<a href="#carpark1" class="carpark-cards__btn btn">
+						<div class="carpark-cards__btn btn">
 							Заказать
-						</a>
+						</div>
 					</div>
 					<div class="carpark-cards__info">
 						<span class="carpark-cards__title">
@@ -686,14 +719,22 @@
 							<b>Трансфер:</b> <br>
 							Аэропорт - город - 5500 руб <br> По городу - 3500 руб
 						</p>
+					</div>
+					<!-- картинки для модалки -->
+					<div class="carpark-cards-modal__gallery">
+						<img src="img/jeep/jeep1.jpg" alt="Изображение">
+						<img src="img/jeep/jeep2.jpg" alt="Изображение">
+						<img src="img/jeep/jeep3.jpg" alt="Изображение">
+						<img src="img/jeep/jeep4.jpg" alt="Изображение">
+						<img src="img/jeep/jeep5.jpg" alt="Изображение">
 					</div>
 				</div>
 				<div class="carpark-cards__card is-active tab-all tab-jeep">
 					<div class="carpark-cards__img">
 						<img src="img/jeep/jeep3.jpg" alt="Автопарк">
-						<a href="#carpark1" class="carpark-cards__btn btn">
+						<div class="carpark-cards__btn btn">
 							Заказать
-						</a>
+						</div>
 					</div>
 					<div class="carpark-cards__info">
 						<span class="carpark-cards__title">
@@ -711,13 +752,21 @@
 							Аэропорт - город - 5500 руб <br> По городу - 3500 руб
 						</p>
 					</div>
+					<!-- картинки для модалки -->
+					<div class="carpark-cards-modal__gallery">
+						<img src="img/jeep/jeep1.jpg" alt="Изображение">
+						<img src="img/jeep/jeep2.jpg" alt="Изображение">
+						<img src="img/jeep/jeep3.jpg" alt="Изображение">
+						<img src="img/jeep/jeep4.jpg" alt="Изображение">
+						<img src="img/jeep/jeep5.jpg" alt="Изображение">
+					</div>
 				</div>
 				<div class="carpark-cards__card is-active tab-all tab-minivan">
 					<div class="carpark-cards__img">
 						<img src="img/miniven/miniven1.jpg" alt="Автопарк">
-						<a href="#carpark1" class="carpark-cards__btn btn">
+						<div class="carpark-cards__btn btn">
 							Заказать
-						</a>
+						</div>
 					</div>
 					<div class="carpark-cards__info">
 						<span class="carpark-cards__title">
@@ -735,13 +784,21 @@
 							Аэропорт - город - 5500 руб <br> По городу - 3500 руб
 						</p>
 					</div>
+					<!-- картинки для модалки -->
+					<div class="carpark-cards-modal__gallery">
+						<img src="img/jeep/jeep1.jpg" alt="Изображение">
+						<img src="img/jeep/jeep2.jpg" alt="Изображение">
+						<img src="img/jeep/jeep3.jpg" alt="Изображение">
+						<img src="img/jeep/jeep4.jpg" alt="Изображение">
+						<img src="img/jeep/jeep5.jpg" alt="Изображение">
+					</div>
 				</div>
 				<div class="carpark-cards__card is-active tab-all tab-minivan">
 					<div class="carpark-cards__img">
 						<img src="img/miniven/miniven2.jpg" alt="Автопарк">
-						<a href="#carpark1" class="carpark-cards__btn btn">
+						<div class="carpark-cards__btn btn">
 							Заказать
-						</a>
+						</div>
 					</div>
 					<div class="carpark-cards__info">
 						<span class="carpark-cards__title">
@@ -759,13 +816,21 @@
 							Аэропорт - город - 5500 руб <br> По городу - 3500 руб
 						</p>
 					</div>
+					<!-- картинки для модалки -->
+					<div class="carpark-cards-modal__gallery">
+						<img src="img/miniven/miniven1.jpg" alt="Изображение">
+						<img src="img/miniven/miniven2.jpg" alt="Изображение">
+						<img src="img/miniven/miniven3.jpg" alt="Изображение">
+						<img src="img/miniven/miniven4.jpg" alt="Изображение">
+						<img src="img/miniven/miniven5.jpg" alt="Изображение">
+					</div>
 				</div>
 				<div class="carpark-cards__card is-active tab-all tab-minibuses">
 					<div class="carpark-cards__img">
 						<img src="img/minibuses/minibuses2.jpg" alt="Автопарк">
-						<a href="#carpark1" class="carpark-cards__btn btn">
+						<div class="carpark-cards__btn btn">
 							Заказать
-						</a>
+						</div>
 					</div>
 					<div class="carpark-cards__info">
 						<span class="carpark-cards__title">
@@ -782,14 +847,22 @@
 							<b>Трансфер:</b> <br>
 							Аэропорт - город - 5500 руб <br> По городу - 3500 руб
 						</p>
+					</div>
+					<!-- картинки для модалки -->
+					<div class="carpark-cards-modal__gallery">
+						<img src="img/minibuses/minibuses1.jpg" alt="Изображение">
+						<img src="img/minibuses/minibuses2.jpg" alt="Изображение">
+						<img src="img/minibuses/minibuses3.jpg" alt="Изображение">
+						<img src="img/minibuses/minibuses4.jpg" alt="Изображение">
+						<img src="img/minibuses/minibuses5.jpg" alt="Изображение">
 					</div>
 				</div>
 				<div class="carpark-cards__card is-active tab-all tab-bus">
 					<div class="carpark-cards__img">
 						<img src="img/bus/bus1.jpg" alt="Автопарк">
-						<a href="#carpark1" class="carpark-cards__btn btn">
+						<div class="carpark-cards__btn btn">
 							Заказать
-						</a>
+						</div>
 					</div>
 					<div class="carpark-cards__info">
 						<span class="carpark-cards__title">
@@ -806,14 +879,22 @@
 							<b>Трансфер:</b> <br>
 							Аэропорт - город - 5500 руб <br> По городу - 3500 руб
 						</p>
+					</div>
+					<!-- картинки для модалки -->
+					<div class="carpark-cards-modal__gallery">
+						<img src="img/bus/bus1.jpg" alt="Изображение">
+						<img src="img/bus/bus2.jpg" alt="Изображение">
+						<img src="img/bus/bus3.jpg" alt="Изображение">
+						<img src="img/bus/bus4.jpg" alt="Изображение">
+						<img src="img/bus/bus5.jpg" alt="Изображение">
 					</div>
 				</div>
 				<div class="carpark-cards__card is-active tab-all tab-bus">
 					<div class="carpark-cards__img">
 						<img src="img/bus/bus2.jpg" alt="Автопарк">
-						<a href="#carpark1" class="carpark-cards__btn btn">
+						<div class="carpark-cards__btn btn">
 							Заказать
-						</a>
+						</div>
 					</div>
 					<div class="carpark-cards__info">
 						<span class="carpark-cards__title">
@@ -831,13 +912,21 @@
 							Аэропорт - город - 5500 руб <br> По городу - 3500 руб
 						</p>
 					</div>
+					<!-- картинки для модалки -->
+					<div class="carpark-cards-modal__gallery">
+						<img src="img/bus/bus1.jpg" alt="Изображение">
+						<img src="img/bus/bus2.jpg" alt="Изображение">
+						<img src="img/bus/bus3.jpg" alt="Изображение">
+						<img src="img/bus/bus4.jpg" alt="Изображение">
+						<img src="img/bus/bus5.jpg" alt="Изображение">
+					</div>
 				</div>
 				<div class="carpark-cards__card is-active tab-all tab-minibuses">
 					<div class="carpark-cards__img">
 						<img src="img/minibuses/minibuses1.jpg" alt="Автопарк">
-						<a href="#carpark1" class="carpark-cards__btn btn">
+						<div class="carpark-cards__btn btn">
 							Заказать
-						</a>
+						</div>
 					</div>
 					<div class="carpark-cards__info">
 						<span class="carpark-cards__title">
@@ -854,6 +943,14 @@
 							<b>Трансфер:</b> <br>
 							Аэропорт - город - 5500 руб <br> По городу - 3500 руб
 						</p>
+					</div>
+					<!-- картинки для модалки -->
+					<div class="carpark-cards-modal__gallery">
+						<img src="img/minibuses/minibuses1.jpg" alt="Изображение">
+						<img src="img/minibuses/minibuses2.jpg" alt="Изображение">
+						<img src="img/minibuses/minibuses3.jpg" alt="Изображение">
+						<img src="img/minibuses/minibuses4.jpg" alt="Изображение">
+						<img src="img/minibuses/minibuses5.jpg" alt="Изображение">
 					</div>
 				</div>
 			</div>
@@ -926,12 +1023,12 @@
 				</a>
 			</li>
 			<li>
-				<a href="#carpark">
+				<a href="#carpark" class="transition-anchor">
 					Автопарк
 				</a>
 			</li>
 			<li>
-				<a href="#services">
+				<a href="#services" class="transition-anchor">
 					Услуги
 				</a>
 			</li>
@@ -941,7 +1038,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="newlyweds.html">
+				<a href="contacts.html">
 					Контакты
 				</a>
 			</li>
@@ -969,17 +1066,16 @@
 		</form>
 	</div>
     <!-- FORM THANKS MODAL -->
-		<div class="js-overlay-window-thank-you modal-form_thank">
-			<div class="close-popup js-close-window"></div>
-			<p class="form-modal__title modal__title">
-				Спасибо!
-			</p>
-			<p class="form-modal__subtitle">
-				Ваша заявка получена. Наш менеджер <br> перезвонит вам в ближайшее время.
-			</p>
-		</div>
+	<div class="js-overlay-window-thank-you modal-form_thank">
+		<div class="close-popup js-close-window"></div>
+		<p class="form-modal__title modal__title">
+			Спасибо!
+		</p>
+		<p class="form-modal__subtitle">
+			Ваша заявка получена. Наш менеджер <br> перезвонит вам в ближайшее время.
+		</p>
+	</div>
 	<script src="js/jquery-3.4.1.min.js"></script>
-	<script src="js/jquery.arcticmodal-0.3.min.js"></script>
 	<script src="js/jquery.maskedinput.js"></script>
 	<!-- slider fotorama -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>

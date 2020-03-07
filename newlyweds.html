@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title></title>
+	<title>Услуги</title>
 	<!-- META Search -->
 	<meta name = "description" content = "">
 	<meta name = "keywords" content = "">
@@ -13,9 +13,6 @@
 	<meta property="og:type" content="">
 	<meta property="og:image" content="img/meta-preview.png">
 	<meta property="og:site_name" content="">
-	<!-- FAVICON-->
-	<!-- <link rel="icon" href="img/favicon.png" type="image/x-icon">
-	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon"> -->
 	<!-- FONTAWESOME -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 	<!-- FONT FAMILY RPT Sans 400 700 -->
@@ -29,7 +26,9 @@
 	<div class="scroll-hidden">
 	<header class="header header-blur" id="header">
 		<div class="nav-menu d-flex">
-			<img src="img/logo.png" alt="" class="logo">
+			<a href="/">
+				<img src="img/logo.png" alt="" class="logo">
+			</a>
 			<nav class="navigation">
 				<ul class="navigation-menu d-flex">
 					<li>
@@ -38,12 +37,12 @@
 						</a>
 					</li>
 					<li>
-						<a href="#">
+						<a href="#carpark" class="transition-anchor">
 							Автопарк
 						</a>
 					</li>
 					<li>
-						<a href="#">
+						<a href="#services" class="transition-anchor">
 							Услуги
 						</a>
 					</li>
@@ -59,6 +58,13 @@
 					</li>
 				</ul>
 			</nav>
+			<div class="hamburger">
+                <div id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
 		</div>
 		<div class="nawlyweds">
 			<div class="container">
@@ -149,6 +155,77 @@
 			</div>
 		</div>
 	</footer>
+	</div>
+	<!-- FIXED PHONE -->
+	<a href="tel:+74955672815" class="fixed-phone">
+		<i class="fas fa-phone-volume"></i>
+	</a>
+	<div id="toTop">
+		<i class="fas fa-long-arrow-alt-up"></i>
+	</div>
+	<!-- FIXED PHONE END -->
+	<div class="modal"></div> <!-- фон для модальных окон -->
+    <!-- MENU MODAL WINDOW -->
+    <div class="menu-modal">
+    	<div class="close-popup js-close-window"></div>
+        <ul class="hamburger-navigation-menu">
+        	<li>
+				<a href="index.html">
+					Главная
+				</a>
+			</li>
+			<li>
+				<a href="index.html#carpark">
+					Автопарк
+				</a>
+			</li>
+			<li>
+				<a href="index.html#services">
+					Услуги
+				</a>
+			</li>
+			<li>
+				<a href="newlyweds.html">
+					Молодоженам
+				</a>
+			</li>
+			<li>
+				<a href="contacts.html">
+					Контакты
+				</a>
+			</li>
+		</ul>
+    </div>
+    <!-- MENU MODAL WINDOW-END -->
+    <!-- modal form  -->
+    <div class="modal-form">
+    	<div class="close-popup js-close-window"></div>
+		<h3 class="entrance-form__title">
+			Оставьте заявку
+		</h3>
+		<form class="entrance-form__form" id="popupForm" name="form">
+			<label class="form-input services-form">
+				<input type="text" name="name" placeholder="Имя">
+				<span class="error-input"></span>
+			</label>
+			<label class="form-input services-form">
+				<input type="text" name="phone" placeholder="Телефон">
+				<span class="error-input"></span>
+			</label>
+			<button type="submit" class="entrance-form__btn btn">
+				Отправить
+			</button>
+		</form>
+	</div>
+    <!-- FORM THANKS MODAL -->
+	<div class="js-overlay-window-thank-you modal-form_thank">
+		<div class="close-popup js-close-window"></div>
+		<p class="form-modal__title modal__title">
+			Спасибо!
+		</p>
+		<p class="form-modal__subtitle">
+			Ваша заявка получена. Наш менеджер <br> перезвонит вам в ближайшее время.
+		</p>
 	</div>
 	<script src="js/jquery-3.4.1.min.js"></script>
 	<script src="js/main.js"></script>
