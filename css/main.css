@@ -194,6 +194,10 @@ button:focus {
 	width: 500px;
 }
 /*thank modal*/
+.modal-form_thank {
+	width: 40%;
+	background-color: #00000073;
+}
 .modal-form_thank,
 .modal-form {
 	position: fixed;
