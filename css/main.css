@@ -1913,17 +1913,11 @@ button:focus {
 }
 /*-- 320-420px col-lg --*/
 @media screen and (max-width: 414px) {
-	h1 {
-	    font-size: 30px;
-	}
 	h2 {
 	    font-size: 21px;
 	}
 	p {
 	    font-size: 15px;
-	}
-	.logo {
-	    max-width: 105px;
 	}
 	.header-overlay:after {
 	    left: -130px;
@@ -1935,9 +1929,6 @@ button:focus {
 	/*.header-overlay:before {
 	    width: 130%;
 	}*/
-	#menuToggle span {
-	    height: 2px;
-	}
 	.home-offer {
 	    padding: 25px 0 35px 20px;
 	}
