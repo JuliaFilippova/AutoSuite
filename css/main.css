@@ -1801,6 +1801,9 @@ button:focus {
 	    font-size: 19px;
 	    padding: 8px 33px;
 	}
+	.header-overlay:before {
+	    display: none;
+	}
 	.header-overlay:after {
 	    transform: skewX(26deg);
 	    left: -108px;
