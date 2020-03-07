@@ -97,6 +97,9 @@ button:focus {
     background: #f3f361;
     border-radius: 50px;
 }
+.btn:hover {
+	background: #f5da59;
+}
 .fixed-phone {
 	background: rgba(0, 163, 255, 0.3);
 	box-shadow: 0px 0px 0px 6px rgba(0, 163, 255, 0.1);
@@ -176,7 +179,7 @@ button:focus {
 	cursor: pointer;
 }
 /*MODAL MENU MODAL FORM*/
-#modal {
+.modal {
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -196,7 +199,7 @@ button:focus {
 /*thank modal*/
 .modal-form_thank {
 	width: 40%;
-	background-color: #00000073;
+	background-color: #00000099;
 }
 .modal-form_thank,
 .modal-form {
@@ -207,7 +210,7 @@ button:focus {
 	transform: translate(-50%, -50%);
 	padding: 70px 50px 50px;
 	box-sizing: border-box;
-	background-color: #00000073;
+	background-color: #00000099;
 	text-align: center;
 	z-index: 99999;
 	border-radius: 30px;
@@ -647,6 +650,8 @@ button:focus {
 .form-input {
 	width: 270px;
 	position: relative;
+	box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, .5);
+	border-radius: 50px;
 }
 .services-form input {
 	width: 100%;
@@ -1689,7 +1694,6 @@ button:focus {
 	}
 	.form-input {
 	    width: 175px;
-	    padding: 10px 12px;
 	    font-size: 18px;
 	}
 	.services-form .btn {
@@ -1776,37 +1780,51 @@ button:focus {
 /*-- 420-575px col-lg --*/
 @media screen and (max-width: 575px) {
 	h1 {
-	    font-size: 27px;
+	    font-size: 37px;
 	}
 	.header-overlay:after {
 		transform: skewX(19.5deg);
 	}
-	.header-overlay:before, .advantages:before, .services:before {
+	.advantages:before, .services:before {
 	    transform: skewX(-19.5deg);
 	}
-	.header-overlay:before {
+	/*.header-overlay:before {
 	    width: 128%;
+	}*/
+	.home-offer-slider {
+
 	}
 	.logo {
-	    max-width: 125px;
-	}
-	.home-offer {
-	    padding: 25px 0 35px 15px;
-	}
-	.home-offer__subtitle {
-	    font-size: 12px;
+	    max-width: 145px;
 	}
 	.btn {
-	    font-size: 17px;
-	    padding: 5px 30px;
+	    font-size: 19px;
+	    padding: 8px 33px;
+	}
+	.header-overlay:after {
+	    transform: skewX(26deg);
+	    left: -108px;
+	}
+	.home-offer-slider {
+		display: none;
+	}
+	.home-offer {
+	    padding: 55px 0 55px 25px;
+	}
+	.home-offer__subtitle {
+	    font-size: 18px;
+	}
+	.home-offer__btn {
+	    margin-bottom: 15px;
+	    padding: 10px 30px;
 	}
 	.home-offer__subtext {
-	    font-size: 11px;
+	    font-size: 14px;
 	}
-	.home-slide__info_mobile {
+	/*.home-slide__info_mobile {
 	    bottom: 40px;
-	}
-	.home-slide__list li {
+	}*/
+	/*.home-slide__list li {
     	margin-bottom: 0px;
 	    font-size: 12px;
 	}
@@ -1843,7 +1861,7 @@ button:focus {
 	}
 	.home-slide__list li:nth-child(5) {
 	    margin-left: -40px;
-	}
+	}*/
 	.advantages:before {
 	    width: 184%;
 	}
@@ -1854,7 +1872,6 @@ button:focus {
 	    width: 80%;
 	    display: block;
 	    margin-bottom: 20px;
-	    box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, .5);
 	}
 	.services-form .btn {
 	    font-size: 22px;
@@ -1891,7 +1908,7 @@ button:focus {
 /*-- 320-420px col-lg --*/
 @media screen and (max-width: 414px) {
 	h1 {
-	    font-size: 25px;
+	    font-size: 30px;
 	}
 	h2 {
 	    font-size: 21px;
@@ -1903,22 +1920,26 @@ button:focus {
 	    max-width: 105px;
 	}
 	.header-overlay:after {
+	    left: -130px;
+	    width: 136%;
+	}
+	/*.header-overlay:after {
 	    left: -45%;
-	}
-	.header-overlay:before {
+	}*/
+	/*.header-overlay:before {
 	    width: 130%;
-	}
+	}*/
 	#menuToggle span {
 	    height: 2px;
 	}
 	.home-offer {
-	    padding: 25px 0 35px 5px;
+	    padding: 25px 0 35px 20px;
 	}
-	.home-offer__btn {
+	/*.home-offer__btn {
 	    margin-bottom: 15px;
 	    padding: 6px 20px;
-	}
-	.home-slide__info_mobile {
+	}*/
+	/*.home-slide__info_mobile {
 	    bottom: 30px;
 	}
 	.home-slide__info_mobile .home-slide__icon span:first-child {
@@ -1944,7 +1965,7 @@ button:focus {
 	}
 	.home-slide__list li:nth-child(5) {
 	    margin-left: -50px;
-	}
+	}*/
 	.advantages:before {
 	    width: 173%;
 	}
@@ -1990,7 +2011,7 @@ button:focus {
 	    max-width: 100%;
 	}
 	.menu-modal {
-	    max-height: 50%;
+	    max-height: 55%;
 	}
 	.carpark-cards-modal:after {
 	    transform: skewX(16.5deg);
@@ -2021,7 +2042,7 @@ button:focus {
 	.advantages:before {
 	    width: 201%;
 	}
-	.home-slide__list li:nth-child(1) {
+	/*.home-slide__list li:nth-child(1) {
 	    margin-left: -27px;
 	}
 	.home-slide__list li:nth-child(2) {
@@ -2035,5 +2056,5 @@ button:focus {
 	}
 	.home-slide__list li:nth-child(4) {
 	    margin-left: -50px;
-	}
+	}*/
 }
