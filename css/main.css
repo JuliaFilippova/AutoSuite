@@ -1781,6 +1781,7 @@ button:focus {
 @media screen and (max-width: 575px) {
 	h1 {
 	    font-size: 41px;
+	    text-shadow: none;
 	}
 	.header-overlay:after {
 		transform: skewX(19.5deg);
