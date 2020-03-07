@@ -85,7 +85,7 @@ button:focus {
     bottom: -22px;
     transform: translate(-50%);
 }
-#servicesForm .error-input {
+#popupForm .error-input {
     left: 50%;
     bottom: -18px;
 }
