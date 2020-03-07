@@ -207,13 +207,13 @@ button:focus {
 	transform: translate(-50%, -50%);
 	padding: 70px 50px 50px;
 	box-sizing: border-box;
-	background-color: #ffffffd4;
+	background-color: #00000073;
 	text-align: center;
 	z-index: 99999;
 	border-radius: 30px;
 }
 .entrance-form__title {
-	color: #343434;
+	color: #fff;
 	line-height: 1.7;
 	margin-bottom: 50px;
 }
@@ -250,7 +250,7 @@ button:focus {
 	position: absolute;
 	width: 22px;
 	height: 1px;
-	background: #000;
+	background: #fff;
 	top: 5px;
 	left: -5px;
 	transform: rotate(-45deg);
@@ -260,7 +260,7 @@ button:focus {
 	position: absolute;
 	width: 22px;
 	height: 1px;
-	background: #000;
+	background: #fff;
 	top: 5px;
 	left: -5px;
 	transform: rotate(45deg);
