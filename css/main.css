@@ -136,13 +136,11 @@ button:focus {
 .fixed-phone:hover:before, .fixed-phone:hover:after{
         animation: pulsate 1.2s infinite;
 }
-
 @keyframes pulsate{
   30%{
         opacity: 1;
         transform: translateX(-50%) translateY(-50%) scale(1);
   }
-
         100%{
         opacity: 0.3;
         transform: translateX(-50%) translateY(-50%) scale(0.5);
@@ -197,10 +195,6 @@ button:focus {
 	width: 500px;
 }
 /*thank modal*/
-.modal-form_thank {
-	width: 40%;
-	background-color: #00000099;
-}
 .modal-form_thank,
 .modal-form {
 	position: fixed;
@@ -213,7 +207,11 @@ button:focus {
 	background-color: #00000099;
 	text-align: center;
 	z-index: 99999;
-	border-radius: 30px;
+	border-radius: 20px;
+}
+.modal-form_thank {
+	width: 42%;
+	background-color: #000000ed;
 }
 .entrance-form__title {
 	color: #fff;
@@ -1909,7 +1907,10 @@ button:focus {
 	.carpark-cards-modal__gallery img {
 	    max-width: 85%;
 	}
-	.modal-form_thank, .modal-form {
+	.modal-form_thank {
+		width: 95%;
+	}
+	.modal-form {
 	    width: 90%;
 	}
 
