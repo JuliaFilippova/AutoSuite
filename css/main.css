@@ -112,7 +112,7 @@ body.modal-open {
 	border-radius: 50%;
 	left: 15px;
     bottom: 15px;
-	z-index: 99999;
+	z-index: 99;
 	padding: 8px 26px;
 	color: #fff;
 	font-size: 35px;
@@ -157,7 +157,7 @@ body.modal-open {
     border-radius: 50%;
     right: 15px;
     bottom: 15px;
-    z-index: 99999;
+    z-index: 99;
     padding: 4px 14px;
     color: #fff;
 }
@@ -764,7 +764,7 @@ body.modal-open {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	z-index: 444;
+	z-index: 999999;
 	transition: all .5s;
 	overflow: auto;
 }
@@ -927,7 +927,7 @@ body.modal-open {
 	    max-width: 1300px;
 	}
 	h2 {
-	    font-size: 37px;
+	    font-size: 34px;
 	}
 	.section-title:before {
 	    width: 115%;
@@ -975,6 +975,9 @@ body.modal-open {
 	.navigation {
 	    padding-right: 140px;
 	}
+	.navigation-menu li a {
+	    font-size: 19px;
+	}
 	.header-overlay:before {
 	    right: -18.8%;
 	}
@@ -991,10 +994,10 @@ body.modal-open {
 	/*page nawlyweds*/
 	.nawlyweds-text li,
 	.contacts-text li {
-	    font-size: 21px;
+	    font-size: 18px;
 	}
 	.nawlyweds-text li {
-	    margin-bottom: 35px;
+	    margin-bottom: 20px;
 	}
 	.carpark-cards-modal-head .logo {
 	    max-width: 210px;
