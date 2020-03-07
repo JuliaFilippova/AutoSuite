@@ -57,6 +57,10 @@ button {
 button:focus {
     outline: none;
 }
+.btn.focus, .btn:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(249, 195, 0, 0.3);
+}
 .scroll-hidden {
 	overflow-x: hidden;
 }
@@ -634,6 +638,7 @@ button:focus {
 }*/
 .form-input {
 	width: 270px;
+	position: relative;
 }
 .services-form input {
 	width: 100%;
