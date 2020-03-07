@@ -1780,7 +1780,7 @@ button:focus {
 /*-- 420-575px col-lg --*/
 @media screen and (max-width: 575px) {
 	h1 {
-	    font-size: 37px;
+	    font-size: 41px;
 	}
 	.header-overlay:after {
 		transform: skewX(19.5deg);
@@ -1791,11 +1791,12 @@ button:focus {
 	/*.header-overlay:before {
 	    width: 128%;
 	}*/
-	.home-offer-slider {
-
+	#menuToggle span {
+	    width: 40px;
+	    height: 4px;
 	}
 	.logo {
-	    max-width: 145px;
+	    max-width: 165px;
 	}
 	.btn {
 	    font-size: 19px;
@@ -1815,11 +1816,13 @@ button:focus {
 	    padding: 55px 0 55px 25px;
 	}
 	.home-offer__subtitle {
-	    font-size: 18px;
+	   	font-size: 20px;
+    	margin: 25px 0;
 	}
 	.home-offer__btn {
 	    margin-bottom: 15px;
-	    padding: 10px 30px;
+	    padding: 14px 50px;
+	    font-size: 21px;
 	}
 	.home-offer__subtext {
 	    font-size: 14px;
