@@ -35,46 +35,46 @@ tab();
 // //MODAL hamburger
 $('#menuToggle').on('click',function() {
     $('.menu-modal').toggle();
-    $('#modal').toggle();
+    $('.modal').toggle();
 });
 //close bg
-$('#modal').on('click',function() {
+$('.modal').on('click',function() {
     $('.menu-modal').hide();
-    $('#modal').hide();
+    $('.modal').hide();
 });
 //close bg
 $('.js-close-window').on('click',function() {
     $('.menu-modal').hide();
-    $('#modal').hide();
+    $('.modal').hide();
 });
 $('.hamburger-navigation-menu > li > a').on('click',function() {
     $('.menu-modal').hide();
-    $('#modal').hide();
+    $('.modal').hide();
 });
 
 //MODAL FORM
 $('.btnForm').on('click',function() {
     $('.modal-form').toggle();
-    $('#modal').toggle();
+    $('.modal').toggle();
 });
 //close bg
-$('#modal').on('click',function() {
+$('.modal').on('click',function() {
     $('.modal-form').hide();
-    $('#modal').hide();
+    $('.modal').hide();
 });
 //close bg
 $('.js-close-window').on('click',function() {
     $('.modal-form').hide();
-    $('#modal').hide();
+    $('.modal').hide();
 });
 //close bg
 $('.js-close-window').on('click',function() {
     $('.modal-form_thank').hide();
-    $('#modal').hide();
+    $('.modal').hide();
 });
-$('#modal').on('click',function() {
+$('.modal').on('click',function() {
     $('.modal-form_thank').hide();
-    $('#modal').hide();
+    $('.modal').hide();
 });
 
 //MODAL sort carpark
@@ -144,11 +144,6 @@ let order = document.getElementsByClassName('carpark-cards__btn'); // Получ
 for (let k in order) {
     order[k].onclick = getCar; // вешаем на все кнопки событие клика
 }
-
-
-
-
-
 
 
 
