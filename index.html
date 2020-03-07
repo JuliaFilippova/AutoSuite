@@ -13,9 +13,6 @@
 	<meta property="og:type" content="">
 	<meta property="og:image" content="img/meta-preview.png">
 	<meta property="og:site_name" content="">
-	<!-- FAVICON-->
-	<!-- <link rel="icon" href="img/favicon.png" type="image/x-icon">
-	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon"> -->
 	<!-- FONTAWESOME -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 	<!-- FONT FAMILY RPT Sans 400 700 -->
@@ -31,27 +28,27 @@
 <body>
 	<div class="scroll-hidden">
 	<header class="header header-overlay" id="header">
-		<div class="nav-menu d-flex">
+		<div class="nav-menu d-flex" id="menuFixed">
 			<img src="img/logo.png" alt="" class="logo">
 			<nav class="navigation">
 				<ul class="navigation-menu d-flex">
 					<li>
-						<a href="#">
+						<a href="#carpark">
 							Автопарк
 						</a>
 					</li>
 					<li>
-						<a href="#">
+						<a href="#services">
 							Услуги
 						</a>
 					</li>
 					<li>
-						<a href="#">
+						<a href="newlyweds.html">
 							Молодоженам
 						</a>
 					</li>
 					<li>
-						<a href="#">
+						<a href="contacts.html">
 							Контакты
 						</a>
 					</li>
@@ -67,7 +64,7 @@
 		</div>
 		<div class="home">
 			<div class="row">
-				<div class="col-sm-6">
+				<div class="col-6">
 					<div class="home-offer">
 						<h1 class="home-offer__title">
 							Пасажирские <br> перевозки
@@ -75,7 +72,7 @@
 						<p class="home-offer__subtitle">
 							Мы предлагаем услуги аренды <br> автомобилей с водителем
 						</p>
-						<a href="#" class="home-offer__btn btn">
+						<a href="#" class="home-offer__btn btn btnForm">
 							Заказать
 						</a>
 						<p class="home-offer__subtext">
@@ -83,7 +80,7 @@
 						</p>
 					</div>
 				</div>
-				<div class="col-sm-6">
+				<div class="col-6">
 					<div class="home-offer-slider">
 						<div class="fotorama" data-arrows="false" data-transition="crossfade">
 							<div class="home-slide" data-img="img/slider1.png"> 
@@ -128,7 +125,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="home-slide" data-img="img/slider1.png"> 
+							<div class="home-slide" data-img="img/slider2.png"> 
 								<h3 class="home-slide__head">
 									Бизнес класс
 								</h3>
@@ -170,9 +167,9 @@
 									</div>
 								</div>
 							</div>
-							<div class="home-slide" data-img="img/slider1.png"> 
+							<div class="home-slide" data-img="img/slider3.png"> 
 								<h3 class="home-slide__head">
-									Авто LUX
+									Пассажирские перевозки
 								</h3>
 								<div class="home-slide__info">
 									<ul class="home-slide__list">
@@ -391,8 +388,14 @@
 				Закажите звонок и мы окажем помощь в выборе транспортного средства!
 			</p>
 			<form action="" class="services-form" id="servicesForm">
-				<input type="text" name="phone" placeholder="Телефон">
-				<input type="text" name="name" placeholder="Имя">
+				<label class="form-input">
+					<input type="text" name="phone" placeholder="Телефон">
+					<span class="error-input"></span>
+				</label>
+				<label class="form-input">
+					<input type="text" name="name" placeholder="Имя">
+					<span class="error-input"></span>
+				</label>
 				<button type="submit" class="services-form__btn btn">
 					Заказать
 				</button>
@@ -401,65 +404,77 @@
 		<div class="container-wider">
 			<div class="services-card-wrap">
 				<div class="row">
-					<div class="col-lg-4 col-md-6">
-						<div class="services-card">
-							<img src="img/services1.png" alt="Услуги">
-							<div class="services-card__subtext">
-								<p>
-									обслуживание торжеств, <br> свадеб, праздников
-								</p>
+					<div class="col-lg-4 col-sm-6">
+						<a href="#">
+							<div class="services-card">
+								<img src="img/services1.png" alt="Услуги">
+								<div class="services-card__subtext">
+									<p>
+										обслуживание торжеств, <br> свадеб, праздников
+									</p>
+								</div>
 							</div>
-						</div>
+						</a>
 					</div>
-					<div class="col-lg-4 col-md-6">
-						<div class="services-card">
-							<img src="img/services1.png" alt="Услуги">
-							<div class="services-card__subtext">
-								<p>
-									Корпоративные выезды, загородные поездки, туры выходного дня
-								</p>
+					<div class="col-lg-4 col-sm-6">
+						<a href="#">
+							<div class="services-card">
+								<img src="img/bus/bus3.jpg" alt="Услуги">
+								<div class="services-card__subtext">
+									<p>
+										Корпоративные выезды, загородные поездки, туры выходного дня
+									</p>
+								</div>
 							</div>
-						</div>
+						</a>
 					</div>
-					<div class="col-lg-4 col-md-6">
-						<div class="services-card">
-							<img src="img/services1.png" alt="Услуги">
-							<div class="services-card__subtext">
-								<p>
-									Перевозки по России, и ближнему зарубежью
-								</p>
+					<div class="col-lg-4 col-sm-6">
+						<a href="#">
+							<div class="services-card">
+								<img src="img/minibuses/minibuses5.jpg" alt="Услуги">
+								<div class="services-card__subtext">
+									<p>
+										Перевозки по России, и ближнему зарубежью
+									</p>
+								</div>
 							</div>
-						</div>
+						</a>
 					</div>
-					<div class="col-lg-4 col-md-6">
-						<div class="services-card">
-							<img src="img/services1.png" alt="Услуги">
-							<div class="services-card__subtext">
-								<p>
-									обслуживание торжеств, <br> свадеб, праздников
-								</p>
+					<div class="col-lg-4 col-sm-6">
+						<a href="#">
+							<div class="services-card">
+								<img src="img/services1.png" alt="Услуги">
+								<div class="services-card__subtext">
+									<p>
+										обслуживание торжеств, <br> свадеб, праздников
+									</p>
+								</div>
 							</div>
-						</div>
+						</a>
 					</div>
-					<div class="col-lg-4 col-md-6">
-						<div class="services-card">
-							<img src="img/services1.png" alt="Услуги">
-							<div class="services-card__subtext">
-								<p>
-									Корпоративные выезды, загородные поездки, туры выходного дня
-								</p>
+					<div class="col-lg-4 col-sm-6">
+						<a href="#">
+							<div class="services-card">
+								<img src="img/bus/bus5.jpg" alt="Услуги">
+								<div class="services-card__subtext">
+									<p>
+										Корпоративные выезды, загородные поездки, туры выходного дня
+									</p>
+								</div>
 							</div>
-						</div>
+						</a>
 					</div>
-					<div class="col-lg-4 col-md-6">
-						<div class="services-card">
-							<img src="img/services1.png" alt="Услуги">
-							<div class="services-card__subtext">
-								<p>
-									Перевозки по России, и ближнему зарубежью
-								</p>
+					<div class="col-lg-4 col-sm-6">
+						<a href="#">
+							<div class="services-card">
+								<img src="img/minibuses/minibuses6.jpg" alt="Услуги">
+								<div class="services-card__subtext">
+									<p>
+										Перевозки по России, и ближнему зарубежью
+									</p>
+								</div>
 							</div>
-						</div>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -498,182 +513,80 @@
 					35-71
 	            </span>
 			</div>
+			<!-- Модальное окно для всех карточек -->
+			<div class="carpark-cards-modal" id="carpark1">
+				<div class="carpark-cards-modal-head">
+					<img src="img/logo.png" alt="Логотип" class="logo">
+					<div class="close-popup js-close-window"></div>
+				</div>
+				<div class="container">
+					<div class="carpark-cards-modal__text d-flex">
+						<div class="carpark-wrap">
+							<span class="carpark-cards__title"></span>
+							<p class="carpark-cards__salon"></p>
+							<p class="carpark-cards__price"></p>
+							<p class="carpark-cards__trans"></p>
+						</div>
+						<a href="#" class="carpark-cards-modal__btn btn btnForm">
+							Заказать
+						</a>
+					</div>
+					<div class="carpark-cards-modal__gallery">
+						<img src="img/services1.png" alt="Изображение">
+						<img src="img/services1.png" alt="Изображение">
+						<img src="img/services1.png" alt="Изображение">
+						<img src="img/services1.png" alt="Изображение">
+					</div>
+				</div>
+			</div>
 			<div class="carpark-cards d-flex">
-				<div class="carpark-cards__card is-active tab-all tab-minibuses">
+				<div class="carpark-cards__card is-active tab-all tab-jeep">
 					<div class="carpark-cards__img">
-						<img src="img/services1.png" alt="Автопарк">
+						<img src="img/jeep/jeep1.jpg" alt="Автопарк">
 						<a href="#carpark1" class="carpark-cards__btn btn">
 							Заказать
 						</a>
-						<div class="carpark-cards-modal" id="carpark1">
-							<div class="carpark-cards-modal-head">
-								<img src="img/logo.png" alt="Логотип" class="logo">
-								<div class="close-popup js-close-window"></div>
-							</div>
-							<div class="container">
-								<div class="carpark-cards-modal__text d-flex">
-									<div class="carpark-wrap">
-										<span class="carpark-cards__title">
-											(Микроавтобус) Mercedes-benz r-klass
-										</span>
-										<p>
-											<b>Салон:</b> черный, кожаный, <br> полная комплекация: <br> подогрев-вентиляция массажных сидений.
-										</p>
-										<p>
-											<b>Цена:</b> 2900-3500 руб* <br>
-											Минимальный заказ 3 часа.
-										</p>
-										<p>
-											<b>Трансфер:</b> <br>
-											Аэропорт - город - 5500 руб <br> По городу - 3500 руб
-										</p>
-									</div>
-									<a href="#" class="carpark-cards-modal__btn btn">
-										Заказать
-									</a>
-								</div>
-								<div class="carpark-cards-modal__gallery">
-									<img src="img/services1.png" alt="Изображение">
-									<img src="img/services1.png" alt="Изображение">
-									<img src="img/services1.png" alt="Изображение">
-									<img src="img/services1.png" alt="Изображение">
-									<img src="img/services1.png" alt="Изображение">
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="carpark-cards__info">
-						<span class="carpark-cards__title">
-							(Микроавтобус) Mercedes-benz r-klass
-						</span>
-						<p>
-							<b>Салон:</b> черный, кожаный, <br> полная комплекация: <br> подогрев-вентиляция массажных сидений.
-						</p>
-						<p>
-							<b>Цена:</b> 2900-3500 руб* <br>
-							Минимальный заказ 3 часа.
-						</p>
-						<p>
-							<b>Трансфер:</b> <br>
-							Аэропорт - город - 5500 руб <br> По городу - 3500 руб
-						</p>
-					</div>
-				</div>
-				<div class="carpark-cards__card is-active tab-all tab-sedan">
-					<div class="carpark-cards__img">
-						<img src="img/services1.png" alt="Автопарк">
-						<a href="#carpark2" class="carpark-cards__btn btn">
-							Заказать
-						</a>
-						<div class="carpark-cards-modal" id="carpark2">
-							<div class="carpark-cards-modal-head">
-								<img src="img/logo.png" alt="Логотип" class="logo">
-								<div class="close-popup js-close-window"></div>
-							</div>
-							<div class="container">
-								<div class="carpark-cards-modal__text d-flex">
-									<div class="carpark-wrap">
-										<span class="carpark-cards__title">
-											(Седан) Mercedes-benz r-klass
-										</span>
-										<p>
-											<b>Салон:</b> черный, кожаный, <br> полная комплекация: <br> подогрев-вентиляция массажных сидений.
-										</p>
-										<p>
-											<b>Цена:</b> 2400-3500 руб* <br>
-											Минимальный заказ 3 часа.
-										</p>
-										<p>
-											<b>Трансфер:</b> <br>
-											Аэропорт - город - 5500 руб <br> По городу - 3500 руб
-										</p>
-									</div>
-									<a href="#" class="carpark-cards-modal__btn btn">
-										Заказать
-									</a>
-								</div>
-								<div class="carpark-cards-modal__gallery">
-									<img src="img/services1.png" alt="Изображение">
-									<img src="img/services1.png" alt="Изображение">
-									<img src="img/services1.png" alt="Изображение">
-									<img src="img/services1.png" alt="Изображение">
-									<img src="img/services1.png" alt="Изображение">
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="carpark-cards__info">
-						<span class="carpark-cards__title">
-							(Седан) Mercedes-benz r-klass
-						</span>
-						<p>
-							<b>Салон:</b> черный, кожаный, <br> полная комплекация: <br>  подогрев-вентиляция массажных сидений.
-						</p>
-						<p>
-							<b>Цена:</b> 2400-3500 руб* <br>
-							Минимальный заказ 3 часа.
-						</p>
-						<p>
-							<b>Трансфер:</b> <br>
-							Аэропорт - город - 5500 руб <br> По городу - 3500 руб
-						</p>
-					</div>
-				</div>
-				<div class="carpark-cards__card is-active tab-all tab-jeep">
-					<div class="carpark-cards__img">
-						<img src="img/services1.png" alt="Автопарк">
-						<a href="#" class="carpark-cards__btn btn">
-							Заказать
-						</a>
-						<div class="carpark-cards-modal" id="carpark1">
-							<div class="carpark-cards-modal-head">
-								<img src="img/logo.png" alt="Логотип" class="logo">
-								<div class="close-popup js-close-window"></div>
-							</div>
-							<div class="container">
-								<div class="carpark-cards-modal__text d-flex">
-									<div class="carpark-wrap">
-										<span class="carpark-cards__title">
-											(Джип) Mercedes-benz r-klass
-										</span>
-										<p>
-											<b>Салон:</b> черный, кожаный, <br> полная комплекация: <br> подогрев-вентиляция массажных сидений.
-										</p>
-										<p>
-											<b>Цена:</b> 3000-3500 руб* <br>
-											Минимальный заказ 3 часа.
-										</p>
-										<p>
-											<b>Трансфер:</b> <br>
-											Аэропорт - город - 5500 руб <br> По городу - 3500 руб
-										</p>
-									</div>
-									<a href="#" class="carpark-cards-modal__btn btn">
-										Заказать
-									</a>
-								</div>
-								<div class="carpark-cards-modal__gallery">
-									<img src="img/services1.png" alt="Изображение">
-									<img src="img/services1.png" alt="Изображение">
-									<img src="img/services1.png" alt="Изображение">
-									<img src="img/services1.png" alt="Изображение">
-									<img src="img/services1.png" alt="Изображение">
-								</div>
-							</div>
-						</div>
 					</div>
 					<div class="carpark-cards__info">
 						<span class="carpark-cards__title">
 							(Джип) Mercedes-benz r-klass
 						</span>
-						<p>
+						<p class="carpark-cards__salon">
 							<b>Салон:</b> черный, кожаный, <br> полная комплекация: <br>  подогрев-вентиляция массажных сидений.
 						</p>
-						<p>
+						<p class="carpark-cards__price">
 							<b>Цена:</b> 3000-3500 руб* <br>
 							Минимальный заказ 3 часа.
 						</p>
-						<p>
+						<p class="carpark-cards__trans">
+							<b>Трансфер:</b> <br>
+							Аэропорт - город - 5500 руб <br> По городу - 3500 руб
+						</p>
+					</div>
+					<!-- <div class="carpark-cards-modal__gallery">
+						<img src="img/services1.png" alt="Изображение">
+						<img src="img/services1.png" alt="Изображение">
+					</div> -->
+				</div>
+				<div class="carpark-cards__card is-active tab-all tab-sedan">
+					<div class="carpark-cards__img">
+						<img src="img/sedan/sedan1.jpg" alt="Автопарк">
+						<a href="#carpark1" class="carpark-cards__btn btn">
+							Заказать
+						</a>
+					</div>
+					<div class="carpark-cards__info">
+						<span class="carpark-cards__title">
+							(Седан)Mercedes-benz s-klass w222
+						</span>
+						<p class="carpark-cards__salon">
+							<b>Салон:</b> черный, кожаный, <br> полная комплекация: <br> подогрев-вентиляция массажных сидений.
+						</p>
+						<p class="carpark-cards__price">
+							<b>Цена:</b> 2900-3500 руб* <br>
+							Минимальный заказ 3 часа.
+						</p>
+						<p class="carpark-cards__trans">
 							<b>Трансфер:</b> <br>
 							Аэропорт - город - 5500 руб <br> По городу - 3500 руб
 						</p>
@@ -681,59 +594,47 @@
 				</div>
 				<div class="carpark-cards__card is-active tab-all tab-sedan">
 					<div class="carpark-cards__img">
-						<img src="img/services1.png" alt="Автопарк">
-						<a href="#" class="carpark-cards__btn btn">
+						<img src="img/sedan/sedan2.jpg" alt="Автопарк">
+						<a href="#carpark1" class="carpark-cards__btn btn">
 							Заказать
 						</a>
-						<div class="carpark-cards-modal" id="carpark1">
-							<div class="carpark-cards-modal-head">
-								<img src="img/logo.png" alt="Логотип" class="logo">
-								<div class="close-popup js-close-window"></div>
-							</div>
-							<div class="container">
-								<div class="carpark-cards-modal__text d-flex">
-									<div class="carpark-wrap">
-										<span class="carpark-cards__title">
-											(Седан) Mercedes-benz r-klass
-										</span>
-										<p>
-											<b>Салон:</b> черный, кожаный, <br> полная комплекация: <br> подогрев-вентиляция массажных сидений.
-										</p>
-										<p>
-											<b>Цена:</b> 2200-3500 руб* <br>
-											Минимальный заказ 3 часа.
-										</p>
-										<p>
-											<b>Трансфер:</b> <br>
-											Аэропорт - город - 5500 руб <br> По городу - 3500 руб
-										</p>
-									</div>
-									<a href="#" class="carpark-cards-modal__btn btn">
-										Заказать
-									</a>
-								</div>
-								<div class="carpark-cards-modal__gallery">
-									<img src="img/services1.png" alt="Изображение">
-									<img src="img/services1.png" alt="Изображение">
-									<img src="img/services1.png" alt="Изображение">
-									<img src="img/services1.png" alt="Изображение">
-									<img src="img/services1.png" alt="Изображение">
-								</div>
-							</div>
-						</div>
+					</div>
+					<div class="carpark-cards__info">
+						<span class="carpark-cards__title">
+							(Седан)Mercedes-benz e-klass new
+						</span>
+						<p class="carpark-cards__salon">
+							<b>Салон:</b> черный, кожаный, <br> полная комплекация: <br>  подогрев-вентиляция массажных сидений.
+						</p>
+						<p class="carpark-cards__price">
+							<b>Цена:</b> 2400-3500 руб* <br>
+							Минимальный заказ 3 часа.
+						</p>
+						<p class="carpark-cards__trans">
+							<b>Трансфер:</b> <br>
+							Аэропорт - город - 5500 руб <br> По городу - 3500 руб
+						</p>
+					</div>
+				</div>
+				<div class="carpark-cards__card is-active tab-all tab-sedan">
+					<div class="carpark-cards__img">
+						<img src="img/sedan/sedan3.jpg" alt="Автопарк">
+						<a href="#carpark1" class="carpark-cards__btn btn">
+							Заказать
+						</a>
 					</div>
 					<div class="carpark-cards__info">
 						<span class="carpark-cards__title">
 							(Седан) Mercedes-benz r-klass
 						</span>
-						<p>
+						<p class="carpark-cards__salon">
 							<b>Салон:</b> черный, кожаный, <br> полная комплекация: <br> подогрев-вентиляция массажных сидений.
 						</p>
-						<p>
+						<p class="carpark-cards__price">
 							<b>Цена:</b> 2200-3500 руб* <br>
 							Минимальный заказ 3 часа.
 						</p>
-						<p>
+						<p class="carpark-cards__trans">
 							<b>Трансфер:</b> <br>
 							Аэропорт - город - 5500 руб <br> По городу - 3500 руб
 						</p>
@@ -741,23 +642,23 @@
 				</div>
 				<div class="carpark-cards__card is-active tab-all tab-sedan">
 					<div class="carpark-cards__img">
-						<img src="img/services1.png" alt="Автопарк">
-						<a href="#" class="carpark-cards__btn btn">
+						<img src="img/sedan/sedan4.jpg" alt="Автопарк">
+						<a href="#carpark1" class="carpark-cards__btn btn">
 							Заказать
 						</a>
 					</div>
 					<div class="carpark-cards__info">
 						<span class="carpark-cards__title">
-							(Седан )Mercedes-benz r-klass
+							(Седан)Mercedes-benz r-klass
 						</span>
-						<p>
+						<p class="carpark-cards__salon">
 							<b>Салон:</b> черный, кожаный, <br> полная комплекация: <br> подогрев-вентиляция массажных сидений.
 						</p>
-						<p>
+						<p class="carpark-cards__price">
 							<b>Цена:</b> 2800-3500 руб* <br>
 							Минимальный заказ 3 часа.
 						</p>
-						<p>
+						<p class="carpark-cards__trans">
 							<b>Трансфер:</b> <br>
 							Аэропорт - город - 5500 руб <br> По городу - 3500 руб
 						</p>
@@ -765,8 +666,8 @@
 				</div>
 				<div class="carpark-cards__card is-active tab-all tab-jeep">
 					<div class="carpark-cards__img">
-						<img src="img/services1.png" alt="Автопарк">
-						<a href="#" class="carpark-cards__btn btn">
+						<img src="img/jeep/jeep2.jpg" alt="Автопарк">
+						<a href="#carpark1" class="carpark-cards__btn btn">
 							Заказать
 						</a>
 					</div>
@@ -774,14 +675,14 @@
 						<span class="carpark-cards__title">
 							(Джип) Mercedes-benz r-klass
 						</span>
-						<p>
+						<p class="carpark-cards__salon">
 							<b>Салон:</b> черный, кожаный, <br> полная комплекация: <br> подогрев-вентиляция массажных сидений.
 						</p>
-						<p>
+						<p class="carpark-cards__price">
 							<b>Цена:</b> 2800-3500 руб* <br>
 							Минимальный заказ 3 часа.
 						</p>
-						<p>
+						<p class="carpark-cards__trans">
 							<b>Трансфер:</b> <br>
 							Аэропорт - город - 5500 руб <br> По городу - 3500 руб
 						</p>
@@ -789,8 +690,8 @@
 				</div>
 				<div class="carpark-cards__card is-active tab-all tab-jeep">
 					<div class="carpark-cards__img">
-						<img src="img/services1.png" alt="Автопарк">
-						<a href="#" class="carpark-cards__btn btn">
+						<img src="img/jeep/jeep3.jpg" alt="Автопарк">
+						<a href="#carpark1" class="carpark-cards__btn btn">
 							Заказать
 						</a>
 					</div>
@@ -798,14 +699,14 @@
 						<span class="carpark-cards__title">
 							(Джип) Mercedes-benz r-klass
 						</span>
-						<p>
+						<p class="carpark-cards__salon">
 							<b>Салон:</b> черный, кожаный, <br> полная комплекация: <br> подогрев-вентиляция массажных сидений.
 						</p>
-						<p>
+						<p class="carpark-cards__price">
 							<b>Цена:</b> 2800-3500 руб* <br>
 							Минимальный заказ 3 часа.
 						</p>
-						<p>
+						<p class="carpark-cards__trans">
 							<b>Трансфер:</b> <br>
 							Аэропорт - город - 5500 руб <br> По городу - 3500 руб
 						</p>
@@ -813,8 +714,8 @@
 				</div>
 				<div class="carpark-cards__card is-active tab-all tab-minivan">
 					<div class="carpark-cards__img">
-						<img src="img/services1.png" alt="Автопарк">
-						<a href="#" class="carpark-cards__btn btn">
+						<img src="img/miniven/miniven1.jpg" alt="Автопарк">
+						<a href="#carpark1" class="carpark-cards__btn btn">
 							Заказать
 						</a>
 					</div>
@@ -822,14 +723,14 @@
 						<span class="carpark-cards__title">
 							(Минивэн)Mercedes-benz r-klass
 						</span>
-						<p>
+						<p class="carpark-cards__salon">
 							<b>Салон:</b> черный, кожаный, <br> полная комплекация: <br> подогрев-вентиляция массажных сидений.
 						</p>
-						<p>
+						<p class="carpark-cards__price">
 							<b>Цена:</b> 2800-3500 руб* <br>
 							Минимальный заказ 3 часа.
 						</p>
-						<p>
+						<p class="carpark-cards__trans">
 							<b>Трансфер:</b> <br>
 							Аэропорт - город - 5500 руб <br> По городу - 3500 руб
 						</p>
@@ -837,8 +738,8 @@
 				</div>
 				<div class="carpark-cards__card is-active tab-all tab-minivan">
 					<div class="carpark-cards__img">
-						<img src="img/services1.png" alt="Автопарк">
-						<a href="#" class="carpark-cards__btn btn">
+						<img src="img/miniven/miniven2.jpg" alt="Автопарк">
+						<a href="#carpark1" class="carpark-cards__btn btn">
 							Заказать
 						</a>
 					</div>
@@ -846,38 +747,38 @@
 						<span class="carpark-cards__title">
 							(Минивэн) Mercedes-benz r-klass
 						</span>
-						<p>
+						<p class="carpark-cards__salon">
 							<b>Салон:</b> черный, кожаный, <br> полная комплекация: <br> подогрев-вентиляция массажных сидений.
 						</p>
-						<p>
+						<p class="carpark-cards__price">
 							<b>Цена:</b> 2800-3500 руб* <br>
 							Минимальный заказ 3 часа.
 						</p>
-						<p>
+						<p class="carpark-cards__trans">
 							<b>Трансфер:</b> <br>
 							Аэропорт - город - 5500 руб <br> По городу - 3500 руб
 						</p>
 					</div>
 				</div>
-				<div class="carpark-cards__card is-active tab-all tab-sedan">
+				<div class="carpark-cards__card is-active tab-all tab-minibuses">
 					<div class="carpark-cards__img">
-						<img src="img/services1.png" alt="Автопарк">
-						<a href="#" class="carpark-cards__btn btn">
+						<img src="img/minibuses/minibuses2.jpg" alt="Автопарк">
+						<a href="#carpark1" class="carpark-cards__btn btn">
 							Заказать
 						</a>
 					</div>
 					<div class="carpark-cards__info">
 						<span class="carpark-cards__title">
-							(Седан) Mercedes-benz r-klass
+							(Микроавтобус) Mercedes-benz r-klass
 						</span>
-						<p>
+						<p class="carpark-cards__salon">
 							<b>Салон:</b> черный, кожаный, <br> полная комплекация: <br> подогрев-вентиляция массажных сидений.
 						</p>
-						<p>
+						<p class="carpark-cards__price">
 							<b>Цена:</b> 2800-3500 руб* <br>
 							Минимальный заказ 3 часа.
 						</p>
-						<p>
+						<p class="carpark-cards__trans">
 							<b>Трансфер:</b> <br>
 							Аэропорт - город - 5500 руб <br> По городу - 3500 руб
 						</p>
@@ -885,8 +786,8 @@
 				</div>
 				<div class="carpark-cards__card is-active tab-all tab-bus">
 					<div class="carpark-cards__img">
-						<img src="img/services1.png" alt="Автопарк">
-						<a href="#" class="carpark-cards__btn btn">
+						<img src="img/bus/bus1.jpg" alt="Автопарк">
+						<a href="#carpark1" class="carpark-cards__btn btn">
 							Заказать
 						</a>
 					</div>
@@ -894,38 +795,62 @@
 						<span class="carpark-cards__title">
 							(Автобус) Mercedes-benz r-klass
 						</span>
-						<p>
+						<p class="carpark-cards__salon">
 							<b>Салон:</b> черный, кожаный, <br> полная комплекация: <br> подогрев-вентиляция массажных сидений.
 						</p>
-						<p>
+						<p class="carpark-cards__price">
 							<b>Цена:</b> 2800-3500 руб* <br>
 							Минимальный заказ 3 часа.
 						</p>
-						<p>
+						<p class="carpark-cards__trans">
 							<b>Трансфер:</b> <br>
 							Аэропорт - город - 5500 руб <br> По городу - 3500 руб
 						</p>
 					</div>
 				</div>
-				<div class="carpark-cards__card is-active tab-all tab-sedan">
+				<div class="carpark-cards__card is-active tab-all tab-bus">
 					<div class="carpark-cards__img">
-						<img src="img/services1.png" alt="Автопарк">
-						<a href="#" class="carpark-cards__btn btn">
+						<img src="img/bus/bus2.jpg" alt="Автопарк">
+						<a href="#carpark1" class="carpark-cards__btn btn">
 							Заказать
 						</a>
 					</div>
 					<div class="carpark-cards__info">
 						<span class="carpark-cards__title">
-							(Седан) Mercedes-benz r-klass
+							(Автобус) Mercedes-benz r-klass
 						</span>
-						<p>
+						<p class="carpark-cards__salon">
 							<b>Салон:</b> черный, кожаный, <br> полная комплекация: <br> подогрев-вентиляция массажных сидений.
 						</p>
-						<p>
+						<p class="carpark-cards__price">
 							<b>Цена:</b> 2800-3500 руб* <br>
 							Минимальный заказ 3 часа.
 						</p>
-						<p>
+						<p class="carpark-cards__trans">
+							<b>Трансфер:</b> <br>
+							Аэропорт - город - 5500 руб <br> По городу - 3500 руб
+						</p>
+					</div>
+				</div>
+				<div class="carpark-cards__card is-active tab-all tab-minibuses">
+					<div class="carpark-cards__img">
+						<img src="img/minibuses/minibuses1.jpg" alt="Автопарк">
+						<a href="#carpark1" class="carpark-cards__btn btn">
+							Заказать
+						</a>
+					</div>
+					<div class="carpark-cards__info">
+						<span class="carpark-cards__title">
+							(Микроавтобус) Mercedes-benz r-klass
+						</span>
+						<p class="carpark-cards__salon">
+							<b>Салон:</b> черный, кожаный, <br> полная комплекация: <br> подогрев-вентиляция массажных сидений.
+						</p>
+						<p class="carpark-cards__price">
+							<b>Цена:</b> 2800-3500 руб* <br>
+							Минимальный заказ 3 часа.
+						</p>
+						<p class="carpark-cards__trans">
 							<b>Трансфер:</b> <br>
 							Аэропорт - город - 5500 руб <br> По городу - 3500 руб
 						</p>
@@ -937,7 +862,7 @@
 	<footer class="footer" id="footer">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-4 text-right">
+				<div class="col-md-4 col-sm-6 text-right order-sm-1">
 					<div class="footer-contacts">
 						<i class="fas fa-phone"></i>
 						<a href="tel:+78632706620">
@@ -951,7 +876,7 @@
 						</a>
 					</div>
 				</div>
-				<div class="col-md-4 text-center">
+				<div class="col-md-4 col-sm-12 text-center order-sm-3">
 					<div class="footer-contacts">
 						<i class="fas fa-envelope"></i>
 						<a href="mailto:avto-lux161@yandex.ru">
@@ -959,10 +884,10 @@
 						</a>
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-4 col-sm-6 order-sm-2">
 					<div class="footer-contacts">
 						<i class="fas fa-map-marker-alt"></i>
-						<a href="#">
+						<a href="https://goo.gl/maps/mn9oiy2MwUbuZoKTA" target="_blank">
 							344092, г.Ростов-на-Дону, <br> ул.Капустина,дом 18
 						</a>
 						<p>
@@ -972,7 +897,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-12 text-center">
+				<div class="col-12 text-center order-sm-4">
 					<p class="footer-copy">
 						© 2020 Создано и доработано в VAVlab.
 					</p>
@@ -981,70 +906,43 @@
 		</div>
 	</footer>
 	</div>
+	<!-- FIXED PHONE -->
+	<a href="tel:+74955672815" class="fixed-phone">
+		<i class="fas fa-phone-volume"></i>
+	</a>
+	<div id="toTop">
+		<i class="fas fa-long-arrow-alt-up"></i>
+	</div>
 
-
+	<!-- FIXED PHONE END -->
 	<div id="modal"></div> <!-- фон для модальных окон -->
     <!-- MENU MODAL WINDOW -->
     <div class="menu-modal">
+    	<div class="close-popup js-close-window"></div>
         <ul class="hamburger-navigation-menu">
-			<li>
-				<a href="index.html" class="menu-active">
+        	<li>
+				<a href="index.html">
 					Главная
 				</a>
 			</li>
 			<li>
-				<a href="about.html">
-					О нас
+				<a href="#carpark">
+					Автопарк
 				</a>
-			</li>
-			<li class="hamburger-dropdown">
-				<a href="#" class="hamburger-dropdown__drop hamburger-dropdown__open">
-					Среднее образование
-					<i class="fas fa-sort-down menu-open"></i>
-				</a>
-				<div class="hamburger-dropdown-content">
-					<ul class="dropdown-content">
-						<li>
-							<a href="training-ksu.html">
-								Ксу
-							</a>
-						</li>
-						<li>
-							<a href="training-gtep.html">
-								Гтэп
-							</a>
-						</li>
-					</ul>
-				</div>
-			</li>
-			<li class="hamburger-dropdown">
-				<a href="#" class="hamburger-dropdown__drop hamburger-dropdown__open">
-					Высшее образование
-					<i class="fas fa-sort-down menu-open"></i>
-				</a>
-				<div class="hamburger-dropdown-content">
-					<ul class="dropdown-content">
-						<li>
-							<a href="training-mei.html">
-								Мэи
-							</a>
-						</li>
-						<li>
-							<a href="training-vo.html">
-								Еврейский институт
-							</a>
-						</li>
-					</ul>
-				</div>
 			</li>
 			<li>
-				<a href="contacts.html">
-					Контакты
+				<a href="#services">
+					Услуги
 				</a>
 			</li>
-			<li class="menu-phone">
-				<a href="tel:+78632412143">
-					8 (863) 241-21-43
+			<li>
+				<a href="newlyweds.html">
+					Молодоженам
+				</a>
+			</li>
+			<li>
+				<a href="newlyweds.html">
+					Контакты
 				</a>
 			</li>
 		</ul>
@@ -1054,32 +952,24 @@
     <div class="modal-form">
     	<div class="close-popup js-close-window"></div>
 		<h3 class="entrance-form__title">
-			Оставьте <br> заявку на обучение
+			Оставьте заявку
 		</h3>
 		<form class="entrance-form__form" id="popupForm" name="form">
-			<label class="form-input">
+			<label class="form-input services-form">
 				<input type="text" name="name" placeholder="Имя">
 				<span class="error-input"></span>
 			</label>
-			<label class="form-input">
+			<label class="form-input services-form">
 				<input type="text" name="phone" placeholder="Телефон">
 				<span class="error-input"></span>
 			</label>
-			<label class="form-input">
-				<input type="text" name="email" placeholder="@mail">
-				<span class="error-input"></span>
-			</label>
-			<label class="form-input">
-				<input type="text" name="text" placeholder="Населенный пункт">
-				<span class="error-input"></span>
-			</label>
-			<button type="submit" class="entrance-form__btn">
+			<button type="submit" class="entrance-form__btn btn">
 				Отправить
 			</button>
 		</form>
 	</div>
     <!-- FORM THANKS MODAL -->
-	<div class="modal-form_thank">
+	<div class="js-overlay-window-thank-you modal-form_thank">
 		<div class="close-popup js-close-window"></div>
 		<p class="form-modal__title modal__title">
 			Спасибо!
@@ -1090,6 +980,7 @@
 	</div>
 	<script src="js/jquery-3.4.1.min.js"></script>
 	<script src="js/jquery.arcticmodal-0.3.min.js"></script>
+	<script src="js/jquery.maskedinput.js"></script>
 	<!-- slider fotorama -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
 	<script src="js/main.js"></script>

@@ -67,6 +67,19 @@ button:focus {
 	max-width: 90%;
 	margin: auto;
 }
+.has-errors {
+	border: 1px solid #E13838;
+}
+.error-input {
+	color: #E13838;
+    font-size: 11px;
+    padding-top: 3px;
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    bottom: -3px;
+    transform: translate(-50%);
+}
 .btn {
 	font-size: 30px;
     text-transform: uppercase;
@@ -74,6 +87,84 @@ button:focus {
     padding: 15px 40px;
     background: #f3f361;
     border-radius: 50px;
+}
+.fixed-phone {
+	background: rgba(0, 163, 255, 0.3);
+	box-shadow: 0px 0px 0px 6px rgba(0, 163, 255, 0.1);
+	width: 70px;
+	height: 70px;
+	position: fixed;
+	border-radius: 50%;
+	left: 15px;
+    bottom: 15px;
+	z-index: 99999;
+	padding: 8px 26px;
+	color: #fff;
+	font-size: 35px;
+	transition: .5s;
+}
+.fixed-phone:hover {
+	background: rgba(0, 163, 255, 0.7);
+	box-shadow: 0px 0px 0px 7px rgba(0, 163, 255, 0.4);
+	transition: .5s;
+	color: #f3f361;
+}
+.fixed-phone::before{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 110px;
+        height: 110px;
+        border: 12px double rgba(0,0,0,0.1);
+        border-radius: 50%;
+        content: '';
+        opacity: 0;
+        transform: translateX(-50%) translateY(-50%) scale(0.2);
+}
+.fixed-phone:hover:before, .fixed-phone:hover:after{
+        animation: pulsate 1.2s infinite;
+}
+
+@keyframes pulsate{
+  30%{
+        opacity: 1;
+        transform: translateX(-50%) translateY(-50%) scale(1);
+  }
+
+        100%{
+        opacity: 0.3;
+        transform: translateX(-50%) translateY(-50%) scale(0.5);
+        }
+}
+#toTop {
+    background: rgba(0, 163, 255, 0.2);
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    border-radius: 50%;
+    right: 15px;
+    bottom: 15px;
+    z-index: 99999;
+    padding: 4px 14px;
+    color: #fff;
+}
+#toTop:hover {
+	background: rgba(0, 163, 255, 0.3);
+	box-shadow: 0px 0px 0px 7px rgba(0, 163, 255, 0.2);
+	color: #f3f361;
+}
+#toTop p {
+	font-size: 30px !important;
+	color: #fff;
+	width: 20px;
+	height: 20px;
+	display: block;
+	margin: auto;
+	position: absolute;
+	left: 28%;
+	margin-top: -2px;
+	z-index: 4;
+	cursor: pointer;
 }
 /*MODAL MENU MODAL FORM*/
 #modal {
@@ -86,20 +177,12 @@ button:focus {
     display: none;
     z-index: 1;
 }
-.menu-modal {
-    display: none;
-    position: fixed;
-    right: 0;
-    top: 0;
-    width: 27%;
-    height: 100%;
-    background: #434878e8;
-    padding: 120px 35px 40px;
-    z-index: 1;
-}
 .modal-form,
 .modal-form_thank {
 	display: none;
+}
+.modal-form_thank {
+	width: 500px;
 }
 /*thank modal*/
 .modal-form_thank,
@@ -109,11 +192,17 @@ button:focus {
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
-	padding: 70px 17px 30px;
+	padding: 70px 50px 50px;
 	box-sizing: border-box;
-	background-color: #30344dbf;
+	background-color: #ffffffd4;
 	text-align: center;
-	margin-bottom: 45px;
+	z-index: 99999;
+	border-radius: 30px;
+}
+.entrance-form__title {
+	color: #343434;
+	line-height: 1.7;
+	margin-bottom: 50px;
 }
 .form-modal__title {
 	font-size: 25px;
@@ -126,12 +215,21 @@ button:focus {
 	font-weight: 500;
 	margin-top: 30px;
 }
+.entrance-form__form  .services-form input {
+    width: 95%;
+    margin-right: 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.entrance-form__btn {
+	margin-top: 15px;
+}
 .close-popup {
 	position: absolute;
-	top: 25px;
+	top: 20px;
     right: 10px;
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
 	cursor: pointer;
 }
 .close-popup:before {
@@ -139,7 +237,7 @@ button:focus {
 	position: absolute;
 	width: 22px;
 	height: 1px;
-	background: #C4C4C4;
+	background: #000;
 	top: 5px;
 	left: -5px;
 	transform: rotate(-45deg);
@@ -149,40 +247,60 @@ button:focus {
 	position: absolute;
 	width: 22px;
 	height: 1px;
-	background: #C4C4C4;
+	background: #000;
 	top: 5px;
 	left: -5px;
 	transform: rotate(45deg);
 }
 .close-popup:hover:before,
 .close-popup:hover:after {
-	background: #fff;
+	background: #f3f361;
 }
-/*modal menu*/
+/*menu modal*/
 .menu-modal {
     display: none;
     position: fixed;
     right: 0;
     top: 0;
-    width: 40%;
+    left: 0;
+    width: 100%;
+    max-height: 45%;
     height: 100%;
-    background: #060606ab;
-    padding: 70px 25px 40px;
+    background: #060606de;
+    padding: 25px 25px 20px;
     z-index: 1;
 }
-.menu-list li a {
-    font-size: 28px;
-    margin: auto;
-    display: block;
-    text-align: center;
-    padding: 20px 0;
+.menu-modal .close-popup {
+	background: #151514;
 }
-.menu-active {
-    color: #f3f361!important;
+.menu-modal .close-popup:before,
+.menu-modal .close-popup:after {
+	background: #fff;
+	width: 30px;
+	height: 2px;
+	top: 16px;
+    left: 3px;
+
+}
+/*menuFIXED*/
+.nav-menu.fixed_menu {
+   	position: fixed;
+   	top: 0;
+   	left: 0;
+   	right: 0;
+    transition: 0.2s top ease-in;
+    background: red;
+    padding: 20px 0;
+    height: 75px;
+    z-index: 9999;
+    box-shadow: 0px 4px 4px rgba(35, 49, 66, 0.04);
 }
 /*HAMBURGER*/
 .hamburger-navigation-menu {
 	padding: 0 10%;
+}
+.hamburger-navigation-menu li {
+	text-align: center;
 }
 .hamburger-navigation-menu li a:hover {
 	color: #f3f361;
@@ -192,6 +310,7 @@ button:focus {
 	font-size: 25px;
 	padding: 8px 0;
     display: inline-block;
+    border-bottom: 1px solid #ffffff38;
 }
 .hamburger-navigation-menu .menu-phone {
 	position: absolute;
@@ -252,9 +371,23 @@ button:focus {
 	color: #000;
 	display: inline-block;
 	font-size: 22px;
+	position: relative;
 }
 .navigation-menu li a:hover {
 	color: #000;
+}
+.navigation-menu li a:before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: -20px;
+	right: -20px;
+	border-bottom: 2px solid #000;
+	transition: 0.5s;
+	transform: scaleX(0);
+}
+.navigation-menu li a:hover:before {
+	transform: scaleX(1);
 }
 .home-offer {
 	width: 600px;
@@ -343,12 +476,12 @@ button:focus {
 .home-slide__list li {
 	margin-bottom: 16px;
 	margin-left: 30px;
-	color: #000;
+	color: #0e2930;
 	display: flex;
     align-items: center;
 }
 .home-slide__list li i:before {
-	background: #000;
+	background: #0e2930;
 }
 .home-slide__icon,
 .home-slide__icon span {
@@ -518,6 +651,8 @@ button:focus {
 .services-card img {
 	border-radius: 20px 20px 0 0;
 	width: 100%;
+	height: 300px;
+	object-fit: cover;
 }
 .services-card__subtext {
 	background: #00566d;
@@ -553,9 +688,13 @@ button:focus {
 	display: inline-block;
 	border-radius: 50px;
 	font-size: 25px;
+	cursor: pointer;
+}
+.carpark-tabs__tab:hover {
+	background: #0692b7c2;
 }
 .carpark-tabs__tab.is-active {
-    background: red;
+    background: #488596;
 }
 .carpark-cards {
 	flex-flow: wrap;
@@ -587,6 +726,10 @@ button:focus {
 	color: #fff;
 	font-size: 22px;
 	padding: 12px 35px;
+}
+.carpark-cards__btn:hover {
+	background: #0692b7c2;
+	color: #fff;
 }
 .carpark-cards__info {
 	background: #00566d;
@@ -627,7 +770,7 @@ button:focus {
 }
 .carpark-cards-modal-head .logo {
     width: 100%;
-    max-width: 380px;
+    max-width: 340px;
 }
 .carpark-cards-modal-head {
 	padding: 45px 45px 100px;
@@ -713,6 +856,9 @@ button:focus {
 .header-blur .navigation-menu li a {
     color: #fff;
 }
+.header-blur .navigation-menu li a:before {
+	border-bottom: 2px solid #fff;
+}
 .nawlyweds,
 .contacts {
 	padding: 45px 0 20px;
@@ -768,7 +914,7 @@ button:focus {
 	    width: 87%;
 	}
 	.services:before {
-	    width: 92%;
+	    width: 97%;
 	}
 	.carpark:before {
 	    width: 50%;
@@ -831,13 +977,14 @@ button:focus {
 	    padding-right: 140px;
 	}
 	.header-overlay:before {
-	    right: -18.5%;
+	    right: -18.8%;
 	}
 	.fotorama__stage {
 		min-height: 625px;
 	}
 	.advantages:before {
-	    right: -16.1%;
+	    right: -21.4%;
+	    width: 92%;
 	}
 	.carpark:before {
 	    left: -77.3%;
@@ -849,6 +996,29 @@ button:focus {
 	}
 	.nawlyweds-text li {
 	    margin-bottom: 35px;
+	}
+	.carpark-cards-modal-head .logo {
+	    max-width: 260px;
+	}
+	.carpark-cards-modal-head .close-popup {
+	    top: 55px;
+	    right: 60px;
+	    width: 70px;
+	    height: 70px;
+	}
+	.carpark-cards-modal-head .close-popup:before, 
+	.carpark-cards-modal-head .close-popup:after {
+	    width: 43px;
+	    height: 5px;
+	    top: 33px;
+	    left: 12px;
+	}
+	.carpark-cards-modal__btn {
+	    padding: 15px 45px;
+	    margin-left: 35px;
+	}
+	.carpark-cards-modal__gallery img {
+	    max-width: 380px;
 	}
 }
 /*-- 1400-1500px col-lg --*/
@@ -974,8 +1144,6 @@ button:focus {
 	.services:before {
 	    width: 100%;
 	}
-
-
 	.carpark:before {
 	    left: -134.4%;
 	}
@@ -987,10 +1155,12 @@ button:focus {
 	}
 	.carpark-cards__img img {
 	    border-radius: 20px 20px 0 0;
+	    height: 300px;
 	}
 	.carpark-cards__info {
 	    border-radius: 0 0 20px 20px;
 	    padding: 20px 50px;
+	    min-height: 490px;
 	}
 	.carpark-cards__title {
 	    font-size: 25px;
@@ -1066,6 +1236,19 @@ button:focus {
 	.footer-contacts a {
 	    font-size: 18px;
 	}
+	.carpark-cards-modal-head {
+	    padding: 15px 20px 40px;
+	}
+	.carpark-cards-modal-head .logo {
+	    max-width: 230px;
+	}
+	.carpark-cards-modal-head .close-popup {
+	    top: 20px;
+	    right: 40px;
+	}
+	.carpark-cards-modal__gallery img {
+	    max-width: 345px;
+	}
 }
 /*-- 992-1200px col-lg --*/
 @media screen and (max-width: 1200px) {
@@ -1132,6 +1315,32 @@ button:focus {
 	.carpark-tabs__tab {
 	    padding: 7px 13px;
 	    font-size: 19px;
+	}
+	.carpark-cards-modal-head .logo {
+	    max-width: 170px;
+	}
+	.carpark-cards-modal-head .close-popup {
+	    width: 50px;
+	    height: 50px;
+	}
+	.carpark-cards-modal-head .close-popup:before, 
+	.carpark-cards-modal-head .close-popup:after {
+	    width: 35px;
+	    height: 3px;
+	    top: 25px;
+	    left: 8px;
+	}
+	.carpark-cards__title {
+	    font-size: 23px;
+	}
+	.carpark-wrap p {
+		font-size: 18px;
+	}
+	.carpark-cards-modal__btn {
+	    padding: 13px 30px;
+	}
+	.carpark-cards-modal__gallery img {
+	    max-width: 275px;
 	}
 
 }
@@ -1204,6 +1413,7 @@ button:focus {
 	.home-slide__icon span p {
 	    margin: 0 30px 0 15px;
 	    font-size: 15px;
+	    color: #0e2930;
 	}
 	.home-slide__list li:nth-child(1) {
 	    margin-left: 65px;
@@ -1301,14 +1511,27 @@ button:focus {
 	.footer-copy {
 	    margin-top: 30px;
 	}
-	/*.header-overlay:before, .advantages:before, .services:before, .carpark:before {
-	    transform: skewX(-19.5deg);
-	}*/
+	.carpark-cards__title {
+	    font-size: 20px;
+	}
+	.carpark-wrap p {
+		font-size: 16px;
+	}
+	.btn {
+	    font-size: 21px;
+	    padding: 10px 23px;
+	}
+	.carpark-cards-modal__gallery img {
+	    max-width: 210px;
+	}
 }
 /*-- 575-768px col-lg --*/
 @media screen and (max-width: 768px) {
 	h1 {
 	    font-size: 35px;
+	}
+	h2 {
+	    font-size: 25px;
 	}
 	.nav-menu {
 	    padding: 15px 10px;
@@ -1344,7 +1567,7 @@ button:focus {
 	    padding: 8px 30px;
 	}
 	.home-offer__subtext {
-		font-size: 16px;
+		font-size: 14px;
 	}
 	.home-slide__list li {
 	    margin-bottom: 4px;
@@ -1374,6 +1597,12 @@ button:focus {
 	.home-slide__list li:nth-child(5) {
 	    margin-left: -50px;
 	}
+	.home-slide__info_mobile .home-slide__icon {
+	    margin-bottom: 10px;
+	}
+	.home-slide__info_mobile .home-slide__icon span {
+	    margin-bottom: 17px;
+	}
 	.home-slide__info_mobile .home-slide__icon span:first-child {
 		margin-left: 110px;
 	}
@@ -1393,44 +1622,339 @@ button:focus {
 	    margin: 0 20px 0 5px;
 	    font-size: 14px;
 	}
+
 	.home-slide__icon span p i {
 	    font-size: 10px;
 	}
+	.advantages-bg {
+	    bottom: 0px;
+	}
 	.advantages:before {
-	    width: 200%;
-	    right: -69.8%;
+	    width: 165%;
+	    right: -69.9%;
+	}
+	.advantages-list li:nth-child(1) {
+	    max-width: 100%;
+	}
+	.advantages-list li:nth-child(2) {
+	    max-width: 100%;
+	}
+	.advantages-list li:nth-child(3) {
+	    max-width: 85%;
+	}
+	.advantages-list li:nth-child(4) {
+	    max-width: 80%;
+	}
+	.advantages-list li:nth-child(5) {
+	    max-width: 100%;
+	}
+	.price {
+	    padding: 25px 0;
+	}
+	.price__subtitle, .services__subtitle {
+	    margin: 20px 0;
+	}
+	.price__item {
+	    margin-bottom: 11px;
+	}
+	.price__item .icon-point:before,
+	.price__item .icon-point  {
+	    width: 10px;
+	    height: 10px;
+	    margin-top: 5px;
+	}
+	.services {
+	    padding: 50px 0 25px;
 	}
 	.services:before {
-	    width: 220%;
-	    right: 260%;
+	    width: 110%;
+	    right: 120%;
 	}
-
-
-
-
-
-
-
-
-
-
-
+	.services-form input {
+	    width: 175px;
+	    padding: 10px 12px;
+	    font-size: 18px;
+	}
+	.services-form .btn {
+	    font-size: 20px;
+	    padding: 14px 26px;
+	}
+	.services-card-wrap {
+	    padding-top: 40px;
+	}
+	.services-card__subtext p {
+	    font-size: 18px;
+	}
+	.services-card__subtext {
+	    min-height: 125px;
+	    padding: 20px 10px;
+	}
+	.services-card {
+	    margin-bottom: 40px;
+	}
+	.carpark {
+	    padding: 25px 0;
+	}
+	.carpark-tabs {
+	    margin: 40px 0 30px;
+	}
+	.carpark-tabs__tab {
+	    padding: 7px 30px;
+	    margin-left: 15px;
+	    margin-bottom: 20px;
+	}
 	.carpark-cards__card {
+	    width: 50%;
+	    padding: 0 8px 40px;
+	}
+	.carpark-cards__info {
+	    padding: 15px 10px;
+	}
+	.carpark-cards__title {
+	    font-size: 18px;
+	    margin-bottom: 7px;
+	}
+	.carpark-cards__btn {
+	    bottom: 7px;
+	    font-size: 17px;
+	    padding: 8px 20px;
+	    background: #00566d7d;
+	}
+	.carpark-cards__info p {
+	    margin-bottom: 10px;
+	    font-size: 14px;
+	}
+	.carpark-cards__info {
+	    min-height: 280px;
+	}
+	.footer {
+	    padding: 20px 0 10px;
+	}
+	.footer-contacts i {
+	    font-size: 20px;
+	}
+	.footer-contacts a, .footer-contacts p, .footer p {
+	    font-size: 15px;
+	}
+	.menu-modal {
+	    max-height: 35%;
+	}
+	.carpark-cards-modal:after {
+	    left: -35%;
 	    width: 100%;
 	}
-
+	.carpark-cards-modal-head .close-popup {
+	    width: 40px;
+	    height: 40px;
+	}
+	.carpark-cards-modal-head .close-popup:before, .carpark-cards-modal-head .close-popup:after {
+	    width: 28px;
+	    top: 20px;
+	    left: 7px;
+	}
+	.carpark-cards-modal__gallery img {
+	    max-width: 235px;
+	}
 }
 /*-- 420-575px col-lg --*/
 @media screen and (max-width: 575px) {
+	h1 {
+	    font-size: 27px;
+	}
+	.header-overlay:after {
+		transform: skewX(19.5deg);
+	}
+	.header-overlay:before, .advantages:before, .services:before {
+	    transform: skewX(-19.5deg);
+	}
+	.header-overlay:before {
+	    width: 128%;
+	}
+	.logo {
+	    max-width: 125px;
+	}
+	.home-offer {
+	    padding: 25px 0 35px 15px;
+	}
+	.home-offer__subtitle {
+	    font-size: 12px;
+	}
+	.btn {
+	    font-size: 17px;
+	    padding: 5px 30px;
+	}
+	.home-offer__subtext {
+	    font-size: 11px;
+	}
+	.home-slide__info_mobile {
+	    bottom: 40px;
+	}
+	.home-slide__list li {
+    	margin-bottom: 0px;
+	    font-size: 12px;
+	}
+	.home-slide__icon span div {
+	    display: none!important;
+	}
+	.home-slide__icon span p {
+	    font-size: 12px;
+	}
+	.home-slide__info_mobile .home-slide__icon span:before {
+	    height: 2px;
+	    left: 0;
+	}
+	.home-slide__info_mobile .home-slide__icon span:first-child {
+	    margin-left: 20px;
+	}
+	.home-slide__info_mobile .home-slide__icon span:nth-child(2) {
+	    margin-left: 6px;
+	}
+	.home-slide__info_mobile .home-slide__icon span:last-child {
+	    margin-left: -8px;
+	}
+	.home-slide__list li:nth-child(1) {
+	    margin-left: -13px;
+	}
+	.home-slide__list li:nth-child(2) {
+	    margin-left: -20px;
+	}
+	.home-slide__list li:nth-child(3) {
+	    margin-left: -26px;
+	}
+	.home-slide__list li:nth-child(4) {
+	    margin-left: -33px;
+	}
+	.home-slide__list li:nth-child(5) {
+	    margin-left: -40px;
+	}
+	.advantages:before {
+	    width: 184%;
+	}
+	.price__item p {
+	    font-size: 19px;
+	}
+	.services-form input {
+	    width: 80%;
+	    display: block;
+	    margin-bottom: 20px;
+	    box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, .5);
+	}
+	.services-form .btn {
+	    font-size: 22px;
+	    padding: 16px 40px;
+	}
+	.services-card__subtext p {
+	    font-size: 20px;
+	}
+	.services-card__subtext {
+	    min-height: 110px;
+	}
+	.carpark-cards__card {
+	    width: 100%;
+	}
+	.carpark-cards__img .btn {
+	    padding: 13px 40px;
+	}
 	.nawlyweds-text li {
 	    font-size: 18px;
+	}
+	.carpark-cards-modal:after {
+	    left: -35%;
+	    width: 110%;
+	    transform: skewX(20.5deg);
+	}
+	.carpark-cards-modal__gallery img {
+	    max-width: 85%;
+	}
+	.modal-form_thank, .modal-form {
+	    width: 90%;
 	}
 
 }
 /*-- 320-420px col-lg --*/
-@media screen and (max-width: 420px) {
-	h2 {
+@media screen and (max-width: 414px) {
+	h1 {
 	    font-size: 25px;
+	}
+	h2 {
+	    font-size: 21px;
+	}
+	p {
+	    font-size: 15px;
+	}
+	.logo {
+	    max-width: 105px;
+	}
+	.header-overlay:after {
+	    left: -45%;
+	}
+	.header-overlay:before {
+	    width: 130%;
+	}
+	#menuToggle span {
+	    height: 2px;
+	}
+	.home-offer {
+	    padding: 25px 0 35px 5px;
+	}
+	.home-offer__btn {
+	    margin-bottom: 15px;
+	    padding: 6px 20px;
+	}
+	.home-slide__info_mobile {
+	    bottom: 30px;
+	}
+	.home-slide__info_mobile .home-slide__icon span:first-child {
+	    margin-left: 20px;
+	}
+	.home-slide__info_mobile .home-slide__icon span:nth-child(2) {
+	    margin-left: 4px;
+	}
+	.home-slide__info_mobile .home-slide__icon span:last-child {
+	    margin-left: -12px;
+	}
+	.home-slide__list li:nth-child(1) {
+	    margin-left: -24px;
+	}
+	.home-slide__list li:nth-child(2) {
+	    margin-left: -30px;
+	}
+	.home-slide__list li:nth-child(3) {
+	    margin-left: -36px;
+	}
+	.home-slide__list li:nth-child(4) {
+	    margin-left: -43px;
+	}
+	.home-slide__list li:nth-child(5) {
+	    margin-left: -50px;
+	}
+	.advantages:before {
+	    width: 173%;
+	}
+	.advantages-list li:nth-child(3) {
+	    max-width: 100%;
+	}
+	.advantages-list li:nth-child(4) {
+	    max-width: 100%;
+	}
+	.advantages-list li:nth-child(6) {
+	    max-width: 100%;
+	}
+	.advantages-bg {
+	    width: 100%;
+	}
+	.check-list {
+	    font-size: 10px;
+	}
+	.price__item p {
+	    font-size: 14px;
+	}
+	.carpark-cards__img .btn {
+	    padding: 10px 40px;
+	}
+	.services:before {
+	    width: 110%;
+	    right: 250%;
 	}
 	.nawlyweds-text li,
 	.contacts-text li {
@@ -1448,8 +1972,51 @@ button:focus {
 	.nawlyweds-text li:nth-child(3) {
 	    max-width: 100%;
 	}
+	.menu-modal {
+	    max-height: 50%;
+	}
+	.carpark-cards-modal:after {
+	    transform: skewX(16.5deg);
+	}
+	.carpark-cards-modal-head {
+	    padding: 15px 5px 40px;
+	}
+	.carpark-cards-modal-head .logo {
+	    max-width: 135px;
+	}
+	.carpark-cards-modal__text {
+		flex-direction: column;
+	}
+	.carpark-cards-modal__btn {
+	   	margin-left: 0;
+	   	margin-top: 30px;
+	}
+	.carpark-cards-modal__gallery img {
+	    max-width: 93%;
+	}
+	.carpark-cards-modal-head .close-popup {
+	    top: 10px;
+	    right: 20px;
+	}
 }
 /*-- 320-420px col-lg --*/
-@media screen and (max-width: 320px) {
-	
+@media screen and (max-width: 321px) {
+	.advantages:before {
+	    width: 201%;
+	}
+	.home-slide__list li:nth-child(1) {
+	    margin-left: -27px;
+	}
+	.home-slide__list li:nth-child(2) {
+	    margin-left: -34px;
+	}
+	.home-slide__list li:nth-child(3) {
+	    margin-left: -40px;
+	}
+	.home-slide__list li:nth-child(5) {
+	    margin-left: -60px;
+	}
+	.home-slide__list li:nth-child(4) {
+	    margin-left: -50px;
+	}
 }
