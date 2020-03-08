@@ -357,7 +357,7 @@ body.modal-open {
 }
 .header-overlay:before {
 	width: 50%;
-	right: -14.5%;
+	right: -14.7%;
 }
 /*overlay fon*/
 .header-overlay:before,
@@ -370,6 +370,9 @@ body.modal-open {
 	top: 0;
 	transform: skewX(-30.5deg);
 	z-index: -1;
+}
+.nav-menu-wrap {
+	height: 100px;
 }
 .nav-menu {
 	padding: 20px 30px;
@@ -422,7 +425,8 @@ body.modal-open {
     margin: 30px 0;
     letter-spacing: 0.03em;
 }
-.home-offer__btn {
+.home-offer__btn,
+.price__btn {
 	margin-bottom: 25px;
 }
 .home-offer-slider {
@@ -526,7 +530,7 @@ body.modal-open {
 }
 .advantages:before {
 	width: 85%;
-    right: -18.5%;
+    right: -20.7%;
 }
 .advantages-bg {
 	position: absolute;
@@ -867,8 +871,12 @@ body.modal-open {
 	padding: 45px 0 20px;
 }
 .nawlyweds .section-title:before,
-.contacts .section-title:before  {
+.contacts .section-title:before {
 	width: 105%;
+	background: #fff;
+}
+.page-price .section-title:before {
+	width: 40%;
 	background: #fff;
 }
 .nawlyweds .section-title {
@@ -907,11 +915,22 @@ body.modal-open {
 .contacts-text li:nth-child(1) {
 	margin-bottom: 20px;
 }
+/*PAGE PRICE*/
+.page-price {
+	padding: 70px 0 150px;
+}
+.page-price__list .icon-point {
+	display: none;
+}
+.page-price__list{
+    margin-left: 0;
+}
 /*-- MEDIA QUERIES --*/
 /*-- 1700-1800px col-lg --*/
 @media screen and (max-width: 1800px) {
 	.advantages:before {
 	    width: 87%;
+	    right: -20.5%;
 	}
 	.services:before {
 	    width: 97%;
@@ -940,7 +959,7 @@ body.modal-open {
 	}
 	.header-overlay:before {
 	    width: 54%;
-	    right: -17.8%;
+	    right: -18%;
 	}
 	.fotorama__nav-wrap {
 	    top: 180px;
@@ -948,7 +967,7 @@ body.modal-open {
 	}
 	.advantages:before {
 	    width: 89%;
-	    right: -18.1%;
+	    right: -20.4%;
 	}
 	.advantages-bg {
 	    width: 1070px;
@@ -985,7 +1004,7 @@ body.modal-open {
 		min-height: 625px;
 	}
 	.advantages:before {
-	    right: -21.4%;
+	    right: -22.4%;
 	    width: 92%;
 	}
 	.carpark:before {
@@ -993,7 +1012,10 @@ body.modal-open {
 	}
 	/*page nawlyweds*/
 	.nawlyweds-text li,
-	.contacts-text li {
+	.contacts-text li,
+	.price__subtitle,
+	.page-price__list .price__item p,
+	.price__subtext {
 	    font-size: 18px;
 	}
 	.nawlyweds-text li {
@@ -1028,6 +1050,13 @@ body.modal-open {
 	}
 	.car-modal__gallery img {
 	    max-width: 25%;
+	}
+	.price__btn {
+		font-size: 25px;
+	}
+	.footer-contacts a,
+	.footer-copy {
+	    font-size: 18px;
 	}
 }
 /*-- 1400-1500px col-lg --*/
@@ -1126,20 +1155,19 @@ body.modal-open {
 	}
 }
 /*-- 1200-1400px col-lg --*/
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1440px) {
 	.container {
 		max-width: 1100px;
 	}
 	.header-overlay:before {
-	    width: 57%;
-    	right: -22.1%;
+	    right: -17.6%;
 	}
 	.fotorama__nav-wrap {
 	    top: 135px;
 	    left: -210px;
 	}
 	.advantages:before {
-	    right: -21.6%;
+	    right: -25.6%;
 	    width: 95%;
 	}
 	.advantages-bg {
@@ -1147,6 +1175,7 @@ body.modal-open {
 	}
 	.services:before {
 	    width: 100%;
+	    right: 60%;
 	}
 	.carpark:before {
 	    left: -134.4%;
@@ -1175,7 +1204,7 @@ body.modal-open {
 	}
 }
 /*-- 1200-1400px col-lg --*/
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1280px) {
 	.container {
 	    max-width: 1000px;
 	}
@@ -1202,7 +1231,7 @@ body.modal-open {
 	    font-size: 17px;
 	}
 	.header-overlay:before {
-	    right: -22.5%;
+	    right: -23%;
 	}
 	.fotorama__nav-wrap {
 	    top: 130px;
@@ -1212,7 +1241,7 @@ body.modal-open {
 		min-height: 510px;
 	}
 	.advantages:before {
-	    right: -25.1%;
+	    right: -27.8%;
 	    width: 100%;
 	}
 	.services-card {
@@ -1234,9 +1263,6 @@ body.modal-open {
 	}
 	.nawlyweds-text li:nth-child(3) {
 	    max-width: 85%;
-	}
-	.footer-contacts a {
-	    font-size: 18px;
 	}
 	.carpark-cards-modal-head {
 	    padding: 15px 20px 40px;
@@ -1274,15 +1300,15 @@ body.modal-open {
 	    font-size: 24px;
 	}
 	.header-overlay:before {
-	    right: -23.3%;
+	    right: -24%;
 	    width: 58%;
 	}
 	.fotorama__nav-wrap {
-	    top: 115px;
-	    left: -155px;
+	    top: 155px;
+	    left: -190px;
 	}
 	.fotorama__stage {
-		min-height: 460px;
+		min-height: 500px;
 	}
 	.home-slide__head {
 	    left: 64%;
@@ -1294,7 +1320,7 @@ body.modal-open {
 	}
 	.advantages:before {
 	    width: 114%;
-	    right: -30.1%;
+	    right: -38.7%;
 	}
 	.advantages-bg {
 	    width: 85%;
@@ -1337,6 +1363,18 @@ body.modal-open {
 	}
 	.carpark-cards-modal__btn {
 	    padding: 13px 30px;
+	}
+}
+@media screen and (max-width: 1024px) {
+	.header-overlay:before {
+	    right: -23.9%;
+	}
+	.advantages:before {
+	    width: 114%;
+	    right: -31.9%;
+	}
+	.services:before {
+	    right: 85%;
 	}
 }
 /*-- 768-992px col-lg --*/
@@ -1560,7 +1598,8 @@ body.modal-open {
 	    font-size: 20px;
 	    padding: 8px 30px;
 	}
-	.home-offer__subtext {
+	.home-offer__subtext,
+	.price__subtext {
 		font-size: 14px;
 	}
 	.home-slide__list li {
@@ -1786,12 +1825,14 @@ body.modal-open {
 	   	font-size: 20px;
     	margin: 25px 0;
 	}
-	.home-offer__btn {
+	.home-offer__btn,
+	.price__btn {
 	    margin-bottom: 15px;
 	    padding: 14px 50px;
 	    font-size: 21px;
 	}
-	.home-offer__subtext {
+	.home-offer__subtext,
+	.price__subtext {
 	    font-size: 14px;
 	}
 	.price__item p {
