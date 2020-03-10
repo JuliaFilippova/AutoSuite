@@ -933,7 +933,7 @@ body.modal-open {
 	    right: -20.5%;
 	}
 	.services:before {
-	    width: 97%;
+	    width: 100%;
 	}
 	.carpark:before {
 	    width: 50%;
@@ -998,13 +998,13 @@ body.modal-open {
 	    font-size: 19px;
 	}
 	.header-overlay:before {
-	    right: -18.8%;
+	    right: -18.7%;
 	}
 	.fotorama__stage {
 		min-height: 625px;
 	}
 	.advantages:before {
-	    right: -22.4%;
+	    right: -22.3%;
 	    width: 92%;
 	}
 	.carpark:before {
