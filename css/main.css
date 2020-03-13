@@ -58,19 +58,12 @@ button {
 button:focus {
     outline: none;
 }
+.d-none {
+	display: none;
+}
 .wrapper-body {
 	overflow-x: hidden;
 }
-
-
-.carpark-cards-modal .fixed_menu {
-	display: none;
-}
-
-
-
-
-
 .advantages,
 .services,
 .carpark {
@@ -406,6 +399,7 @@ body.modal-open {
 .nav-menu {
 	padding: 20px 30px;
 	align-items: center;
+	display: flex;
 }
 .logo {
 	width: 100%;

@@ -167,6 +167,14 @@ for (let k in order) {
     order[k].onclick = getCar; // вешаем на все кнопки событие клика
 }
 
+// скрыть фиксированое менб при открытом окне
+$('.carpark-cards__btn').click(function(event) {
+    $('.nav-menu-wrap').hide();   
+});
+$('.js-close-window').click(function(event) {
+    $('.nav-menu-wrap').fadeIn();   
+});
+
 //VALIDATE FORM
 const resetFormsErrors = () => {
     $('form span.error-input').each((i, el) => $(el).text(''));
