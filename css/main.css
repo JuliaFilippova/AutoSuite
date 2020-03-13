@@ -61,6 +61,16 @@ button:focus {
 .wrapper-body {
 	overflow-x: hidden;
 }
+
+
+.carpark-cards-modal .fixed_menu {
+	display: none;
+}
+
+
+
+
+
 .advantages,
 .services,
 .carpark {
