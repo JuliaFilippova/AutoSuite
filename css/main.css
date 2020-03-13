@@ -320,6 +320,12 @@ body.modal-open {
 .fixed_menu .navigation-menu li a {
 	color: #fff;
 }
+.fixed_menu .navigation-menu li a:before {
+	background: #fff
+}
+.fixed_menu .navigation-menu li a:hover {
+    color: #fff;
+}
 .fixed_menu #menuToggle span {
 	background: #fff;
 }
