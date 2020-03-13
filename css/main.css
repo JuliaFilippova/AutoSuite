@@ -301,8 +301,8 @@ body.modal-open {
 	background: #fff;
 	width: 30px;
 	height: 2px;
-	top: 16px;
-    left: 3px;
+	top: 22px;
+    left: 7px;
 }
 /*menuFIXED*/
 .fixed_menu {
@@ -2364,7 +2364,7 @@ body.modal-open {
 	    right: 20px;
 	}
 	.menu-modal {
-	    max-height: 65%;
+	    max-height: 69%;
 	}
 }
 /*-- 320-420px col-lg --*/
