@@ -251,8 +251,8 @@ body.modal-open {
 	position: absolute;
 	top: 20px;
     right: 10px;
-    width: 35px;
-    height: 35px;
+    width: 45px;
+    height: 45px;
 	cursor: pointer;
 }
 .close-popup:before {
@@ -2364,7 +2364,7 @@ body.modal-open {
 	    right: 20px;
 	}
 	.menu-modal {
-	    max-height: 57%;
+	    max-height: 65%;
 	}
 }
 /*-- 320-420px col-lg --*/
