@@ -321,7 +321,7 @@ body.modal-open {
 	color: #fff;
 }
 .fixed_menu .navigation-menu li a:before {
-	background: #fff
+	border-bottom: 2px solid #fff;
 }
 .fixed_menu .navigation-menu li a:hover {
     color: #fff;
@@ -385,10 +385,10 @@ body.modal-open {
 .home-offer-slider::before {
     position: absolute;
     top: -130px;
-    right: 21.4%;
+    right: 60.4%;
     content: '';
-    width: 1965px;
-    height: 6000px;
+    width: 1248px;
+    height: 4800px;
     background: #ffffff87;
     transform: skew(-30.2deg);
     z-index: -1;
@@ -1095,7 +1095,7 @@ body.modal-open {
 	    width: 400px;
 	}
 	.home-offer-slider::before {
-	    right: 10.1%;
+	   right: 54.5%;
 	}
 	.fotorama__nav-wrap {
 	    top: 210px;
@@ -1135,7 +1135,7 @@ body.modal-open {
 	    left: 209px!important;
 	}
 	.home-offer-slider::before {
-	    right: 1.9%;
+	    right: 48.7%;
 	}
 	.home-slide__head {
 	    left: 73%;
@@ -1288,7 +1288,7 @@ body.modal-open {
 	    font-size: 20px;
 	}
 	.home-offer-slider::before {
-	    right: -2.1%;
+	    right: 49.9%;
 	}
 	.home-slide__list li:nth-child(3) {
 	    margin-left: 0px;
@@ -1350,7 +1350,7 @@ body.modal-open {
 		max-width: 1100px;
 	}
 	.home-offer-slider::before {
-	    right: -5.8%;
+	    right: 50.7%;
 	}
 	.fotorama__img {
 	    left: 145px!important;
@@ -1399,7 +1399,7 @@ body.modal-open {
 	    left: 141px!important;
 	}
 	.home-offer-slider::before {
-	    right: -7.1%;
+	    right: 51.9%;
 	}
 	.home-slide__head {
 	    left: 75%;
@@ -1569,7 +1569,7 @@ body.modal-open {
 	    transform: rotate(-62deg);
 	}
 	.home-offer-slider::before {
-	    right: -25.9%;
+	    right: 41.4%;
 	    transform: skew(-28.3deg);
 	}
 	.fotorama__img {
@@ -1625,7 +1625,7 @@ body.modal-open {
 	    width: 430px;
 	}
 	.home-offer-slider::before {
-	    right: 44.1%;
+	    right: -20.9%;
 	    width: 1572px;
 	}
 	.fotorama__img {
@@ -1684,6 +1684,9 @@ body.modal-open {
 @media screen and (max-width: 992px) {
 	.home-offer-slider {
 	    padding: 30px 0 0 0;
+	}
+	.home-offer-slider::before {
+	    right: -23%;
 	}
 	.fotorama__img {
 	    margin-left: -98px;
@@ -1890,6 +1893,9 @@ body.modal-open {
 }
 /*-- 575-768px col-lg --*/
 @media screen and (max-width: 768px) {
+	.home-offer-slider::before {
+	    right: -43.4%;
+	}
 	.fotorama__stage {
 		min-height: 380px;
 	}
@@ -2163,6 +2169,9 @@ body.modal-open {
 @media screen and (max-width: 660px) {
 	.header-overlay:after {
 	    left: -52%;
+	}
+	.home-offer-slider::before {
+	    right: -58.4%;
 	}
 	.fotorama__img {
 	    margin-left: -124px;
