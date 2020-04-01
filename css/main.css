@@ -1069,9 +1069,12 @@ body.modal-open {
 	border-bottom: 2px solid #fff;
 }
 
-.nawlyweds,
 .contacts {
 	padding: 45px 0 20px;
+}
+
+.nawlyweds {
+	padding: 130px 0 20px;
 }
 
 .nawlyweds .section-title:before,
